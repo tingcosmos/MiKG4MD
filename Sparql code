@@ -1,0 +1,100 @@
+SPARQL CODE FOR TEST CASE 1:
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX drugbank: <http://www4.wiwiss.fu-berlin.de/drugbank/resource/drugbank/>
+PREFIX dc: <http://purl.org/dc/1.1#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia3: <http://dbpedia.org/property/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX pubmed: <http://linkedlifedata.com/resource/pubmed/> 
+PREFIX ctec: <http://eurecaproject.eu/ctec/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
+PREFIX mesh: <http://id.nlm.nih.gov/mesh/>
+PREFIX mikg: <http://ztonebv.com/MIKG#>
+
+SELECT DISTINCT ?GM ?NTM ?Ref ?PMID ?Level ?MD1 ?MD2
+WHERE {
+       {mikg:Bifidobacterium-dentium rdfs:label ?GM.
+        mikg:Depressive-disorder rdfs:label ?MD1.
+        mikg:Anxiety-disorders rdfs:label ?MD2.
+?s      mikg:hasGutMicrobiota mikg:Bifidobacterium-dentium;
+        mikg:hasNeurotransmitter ?NTM;
+        mikg:hasModulation ?Modulate;
+        mikg:hasReference ?Ref;
+        mikg:hasEvidenceLevel ?Level.
+?Ref    mikg:hasPMID ?PMID.
+?r1     mikg:hasNeurotransmitter ?NTM;
+        mikg:hasMentalDisorder mikg:Depressive-disorder.}
+UNION
+{?r2    mikg:hasMentalDisorder mikg:Anxiety-disorders.}
+FILTER (lang(?MD1)='en')
+FILTER (lang(?MD2)='en')
+    }
+
+SPARQL CODE FOR TEST CASE 2:
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/1.1#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX ctec: <http://eurecaproject.eu/ctec/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
+PREFIX mesh: <http://id.nlm.nih.gov/mesh/>
+PREFIX mikg: <http://ztonebv.com/MIKG#>
+
+SELECT  DISTINCT  ?GM ?NTM ?Modulate ?Level ?Ref ?PMID ?MD
+WHERE {
+       {mikg:Acetylcholine rdfs:label ?NTM.
+?s      mikg:hasNeurotransmitter mikg:Acetylcholine;
+        mikg:hasGutMicrobiota ?Microbiota;
+        mikg:hasModulation ?Modulate;
+        mikg:hasEvidenceLevel ?Level;
+        mikg:hasReference ?Ref.
+?Ref    mikg:hasPMID ?PMID.
+?Microbiota rdfs:label ?GM.
+?r      mikg:hasNeurotransmitter mikg:Acetylcholine;
+        mikg:hasMentalDisorder ?Disorder.
+?Disorder rdfs:label ?MD.}
+FILTER (lang(?MD)='en')
+FILTER (lang(?NTM)='en')
+FILTER (?Level='C')
+    }
+
+SPARQL CODE FOR TEST CASE 3:
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dc: <http://purl.org/dc/1.1#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX ctec: <http://eurecaproject.eu/ctec/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
+PREFIX mesh: <http://id.nlm.nih.gov/mesh/>
+PREFIX mikg: <http://ztonebv.com/MIKG#>
+
+SELECT DISTINCT ?GM ?NTM1 ?NTM2 ?Level ?Ref ?PMID ?MD
+WHERE {
+       {mikg:Bipolar-disorder rdfs:label ?MD.
+        mikg:Dopamine rdfs:label ?NTM1.
+        mikg:Norepinephrine rdfs:label ?NTM2.
+?s1     mikg:hasNeurotransmitter mikg:Dopamine;
+        mikg:hasGutMicrobiota ?GM;
+        mikg:hasEvidenceLevel ?Level;
+        mikg:hasModulation ?Modulate;
+        mikg:hasReference ?Ref.
+?Ref    mikg:hasPMID ?PMID.
+?r      mikg:hasMentalDisorder mikg:Bipolar-disorder.}
+FILTER EXISTS
+{?s2    mikg:hasNeurotransmitter mikg:Norepinephrine;
+        mikg:hasGutMicrobiota ?GM;
+        mikg:hasModulation ?Modulate.}
+FILTER (lang(?MD)='en')
+FILTER (lang(?NTM1)='en')
+FILTER (lang(?NTM2)='en')
+    }
+ORDER BY ASC(?Ref)
