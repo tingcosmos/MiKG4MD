@@ -3,2890 +3,2890 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix umls: <http://bioportal.bioontology.org/ontologies/umls#> .
 @prefix mesh2020: <http://id.nlm.nih.gov/mesh/2020/>.
-@prefix mikg: <http://ztonebv.com/MIKG#> .
+@prefix mikg4md: <http://ztonebv.com/MIKG4MD#> .
 
 <http://bioportal.bioontology.org/ontologies/umls#cui> a owl:AnnotationProperty .
-<http://ztonebv.com/MIKG#hasReference>
+<http://ztonebv.com/MIKG4MD#hasReference>
   a owl:ObjectProperty ;
-  owl:inverseOf <http://ztonebv.com/MIKG#hasStatement> ;
-  rdfs:domain <http://ztonebv.com/MIKG#statement>, <http://ztonebv.com/MIKG#relationship> ;
-  rdfs:range <http://ztonebv.com/MIKG#reference> ;
+  owl:inverseOf <http://ztonebv.com/MIKG4MD#hasStatement> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#statement>, <http://ztonebv.com/MIKG4MD#relationship> ;
+  rdfs:range <http://ztonebv.com/MIKG4MD#reference> ;
   rdfs:comment "this conclusion or statement is from which paper"@en .
 
-<http://ztonebv.com/MIKG#hasStatement>
+<http://ztonebv.com/MIKG4MD#hasStatement>
   a owl:ObjectProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#reference> ;
-  rdfs:range <http://ztonebv.com/MIKG#statement> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#reference> ;
+  rdfs:range <http://ztonebv.com/MIKG4MD#statement> ;
   rdfs:comment "the reference paper states what evidence"@en .
 
-<http://ztonebv.com/MIKG#hasGutMicrobiota>
+<http://ztonebv.com/MIKG4MD#hasGutMicrobiota>
   a owl:ObjecttypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#statement> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
   rdfs:comment "the statement mentioned this gut microbiota"@en .
 
-<http://ztonebv.com/MIKG#hasNeurotransmitter>
+<http://ztonebv.com/MIKG4MD#hasNeurotransmitter>
   a owl:ObjecttypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#statement>, <http://ztonebv.com/MIKG#relationship> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#statement>, <http://ztonebv.com/MIKG4MD#relationship> ;
   rdfs:comment "the statement mentioned this Neurotransmitter"@en .
 
-<http://ztonebv.com/MIKG#hasMentalDisorder>
+<http://ztonebv.com/MIKG4MD#hasMentalDisorder>
   a owl:ObjecttypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#statement>, <http://ztonebv.com/MIKG#relationship> .
+  rdfs:domain <http://ztonebv.com/MIKG4MD#statement>, <http://ztonebv.com/MIKG4MD#relationship> .
 
-<http://ztonebv.com/MIKG#hasConclusion>
+<http://ztonebv.com/MIKG4MD#hasConclusion>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#statement> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
   rdfs:comment "the conclusion from reference papers"@en .
 
-<http://ztonebv.com/MIKG#hasRegulation>
+<http://ztonebv.com/MIKG4MD#hasRegulation>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#statement> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
   rdfs:comment "the statement has regulation type: inhibit or promote"@en .
 
-<http://ztonebv.com/MIKG#hasEvidenceLevel>
+<http://ztonebv.com/MIKG4MD#hasEvidenceLevel>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#statement> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
   rdfs:comment "evidence level ranging from A to E"@en .
 
-<http://ztonebv.com/MIKG#hasModel>
+<http://ztonebv.com/MIKG4MD#hasModel>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#statement> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
   rdfs:comment "there are two models"@en .
 
-<http://ztonebv.com/MIKG#hasModulation>
+<http://ztonebv.com/MIKG4MD#hasModulation>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#statement> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
   rdfs:comment "the statement has modulation type: increase or decrease"@en .
 
-<http://ztonebv.com/MIKG#hasPMID>
+<http://ztonebv.com/MIKG4MD#hasPMID>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#reference> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#reference> ;
   rdfs:comment "the PubMed ID of the reference, such as 30718848"@en ;
   rdfs:range rdf:XMLLiteral .
 
-<http://ztonebv.com/MIKG#hasDOI>
+<http://ztonebv.com/MIKG4MD#hasDOI>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#reference> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#reference> ;
   rdfs:comment "the DOI of the reference"@en .
 
-<http://ztonebv.com/MIKG#hasRefID>
+<http://ztonebv.com/MIKG4MD#hasRefID>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#reference> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#reference> ;
   rdfs:comment "the referenceID including author and published year such as Valles2019"@en .
 
-<http://ztonebv.com/MIKG#Neurotransmitter>
+<http://ztonebv.com/MIKG4MD#Neurotransmitter>
   a rdfs:Class ;
   umls:cui "C0027908" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D018377> ;
   rdfs:label "Neurotransmitter"@en, "神经递质"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D018377> a owl:Class .
-<http://ztonebv.com/MIKG#Dopamine>
+<http://ztonebv.com/MIKG4MD#Dopamine>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
   umls:cui "C0013030" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D004298> ;
   rdfs:label "Dopamine"@en, "多巴胺"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D004298> a owl:Class .
-<http://ztonebv.com/MIKG#Serotonin>
+<http://ztonebv.com/MIKG4MD#Serotonin>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
   umls:cui "C0036751" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D012701> ;
   rdfs:label "Serotonin"@en, "血清素"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D012701> a owl:Class .
-<http://ztonebv.com/MIKG#gamma-Aminobutyric-Acid>
+<http://ztonebv.com/MIKG4MD#gamma-Aminobutyric-Acid>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
   umls:cui "C0016904" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D005680> ;
   rdfs:label "Gamma-Aminobutyric Acid"@en, "r-氨基丁酸"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D005680> a owl:Class .
-<http://ztonebv.com/MIKG#Norepinephrine>
+<http://ztonebv.com/MIKG4MD#Norepinephrine>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
   umls:cui "C0028351" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D009638> ;
   rdfs:label "Norepinephrine"@en, "去甲肾上腺素"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D009638> a owl:Class .
-<http://ztonebv.com/MIKG#Histamine>
+<http://ztonebv.com/MIKG4MD#Histamine>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
   umls:cui "C0019588" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D006632> ;
   rdfs:label "Histamine"@en, "组胺"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D006632> a owl:Class .
-<http://ztonebv.com/MIKG#Acetylcholine>
+<http://ztonebv.com/MIKG4MD#Acetylcholine>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
   umls:cui "C0001041" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D000109> ;
   rdfs:label "Acetylcholine"@en, "乙酰胆碱"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D000109> a owl:Class .
-<http://ztonebv.com/MIKG#gutMicrobiota>
+<http://ztonebv.com/MIKG4MD#gutMicrobiota>
   a rdfs:Class ;
   umls:cui "C4018878" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D000069196> ;
   rdfs:label "Gut Microbiota"@en, "肠道微生物"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D000069196> a owl:Class .
-<http://ztonebv.com/MIKG#Bacillus-cereus>
+<http://ztonebv.com/MIKG4MD#Bacillus-cereus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0004590" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001409> ;
   rdfs:label "Bacillus cereus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D001409> a owl:Class .
-<http://ztonebv.com/MIKG#Burkholderia-oklahomensis>
+<http://ztonebv.com/MIKG4MD#Burkholderia-oklahomensis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C1898603" ;
   rdfs:label "Burkholderia oklahomensis"@en .
 
-<http://ztonebv.com/MIKG#Acinetobacter-baumannii>
+<http://ztonebv.com/MIKG4MD#Acinetobacter-baumannii>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0314787" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D040981> ;
   rdfs:label "Acinetobacter baumannii"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D040981> a owl:Class .
-<http://ztonebv.com/MIKG#Paenibacillus>
+<http://ztonebv.com/MIKG4MD#Paenibacillus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C1011299" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D056507> ;
   rdfs:label "Paenibacillus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D056507> a owl:Class .
-<http://ztonebv.com/MIKG#Coprococcus>
+<http://ztonebv.com/MIKG4MD#Coprococcus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C1004293" ;
   rdfs:label "Coprococcus"@en .
 
-<http://ztonebv.com/MIKG#Fusobacterium-varium>
+<http://ztonebv.com/MIKG4MD#Fusobacterium-varium>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0317553" ;
   rdfs:label "Fusobacterium varium"@en .
 
-<http://ztonebv.com/MIKG#Fusobacterium-ulcerans>
+<http://ztonebv.com/MIKG4MD#Fusobacterium-ulcerans>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0445938" ;
   rdfs:label "Fusobacterium ulcerans"@en .
 
-<http://ztonebv.com/MIKG#Bacteroides-fragilis>
+<http://ztonebv.com/MIKG4MD#Bacteroides-fragilis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0004663" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001441> ;
   rdfs:label "Bacteroides fragilis"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D001441> a owl:Class .
-<http://ztonebv.com/MIKG#Acetomicrobium-hydrogeniformans>
+<http://ztonebv.com/MIKG4MD#Acetomicrobium-hydrogeniformans>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C2783099" ;
   rdfs:label "Acetomicrobium hydrogeniformans"@en .
 
-<http://ztonebv.com/MIKG#Bacteroides-uniformis>
+<http://ztonebv.com/MIKG4MD#Bacteroides-uniformis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0314925" ;
   rdfs:label "Bacteroides uniformis"@en .
 
-<http://ztonebv.com/MIKG#Clostridium-ramosum>
+<http://ztonebv.com/MIKG4MD#Clostridium-ramosum>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0315111" ;
   rdfs:label "Clostridium ramosum"@en .
 
-<http://ztonebv.com/MIKG#Hafnia-alvei>
+<http://ztonebv.com/MIKG4MD#Hafnia-alvei>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0315259" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D020611> ;
   rdfs:label "Hafnia alvei"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D020611> a owl:Class .
-<http://ztonebv.com/MIKG#Klebsiella-pneumoniae>
+<http://ztonebv.com/MIKG4MD#Klebsiella-pneumoniae>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0001699" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D007711> ;
   rdfs:label "Klebsiella pneumoniae"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D007711> a owl:Class .
-<http://ztonebv.com/MIKG#Morganella-morganii>
+<http://ztonebv.com/MIKG4MD#Morganella-morganii>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0315276" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D020613> ;
   rdfs:label "Morganella morganii"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D020613> a owl:Class .
-<http://ztonebv.com/MIKG#Candida-albicans>
+<http://ztonebv.com/MIKG4MD#Candida-albicans>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0006837" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D002176> ;
   rdfs:label "Candida albicans"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D002176> a owl:Class .
-<http://ztonebv.com/MIKG#Lactococcus-lactis-subsp-cremoris>
+<http://ztonebv.com/MIKG4MD#Lactococcus-lactis-subsp-cremoris>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0544170" ;
   rdfs:label "Lactococcus lactis subsp cremoris"@en .
 
-<http://ztonebv.com/MIKG#Lactococcus-lactis-subsp-lactis>
+<http://ztonebv.com/MIKG4MD#Lactococcus-lactis-subsp-lactis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C1449851" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D013294> ;
   rdfs:label "Lactococcus lactis subsp lactis"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D013294> a owl:Class .
-<http://ztonebv.com/MIKG#Lactobacillus-plantarum>
+<http://ztonebv.com/MIKG4MD#Lactobacillus-plantarum>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0317608" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D048191> ;
   rdfs:label "Lactobacillus plantarum"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D048191> a owl:Class .
-<http://ztonebv.com/MIKG#Streptococcus-thermophilus>
+<http://ztonebv.com/MIKG4MD#Streptococcus-thermophilus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0318180" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D048249> ;
   rdfs:label "Streptococcus thermophilus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D048249> a owl:Class .
-<http://ztonebv.com/MIKG#Enterococcus-faecalis>
+<http://ztonebv.com/MIKG4MD#Enterococcus-faecalis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0038404" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D013293> ;
   rdfs:label "Enterococcus faecalis"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D013293> a owl:Class .
-<http://ztonebv.com/MIKG#Pichia-guilliermondii>
+<http://ztonebv.com/MIKG4MD#Pichia-guilliermondii>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0319552" ;
   rdfs:label "Pichia guilliermondii"@en .
 
-<http://ztonebv.com/MIKG#Rhodospirillum-rubrum>
+<http://ztonebv.com/MIKG4MD#Rhodospirillum-rubrum>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0035503" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D012247> ;
   rdfs:label "Rhodospirillum rubrum"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D012247> a owl:Class .
-<http://ztonebv.com/MIKG#Saccharomyces-cerevisiae>
+<http://ztonebv.com/MIKG4MD#Saccharomyces-cerevisiae>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0036025" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D012441> ;
   rdfs:label "Saccharomyces cerevisiae"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D012441> a owl:Class .
-<http://ztonebv.com/MIKG#Clostridium>
+<http://ztonebv.com/MIKG4MD#Clostridium>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0009054" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D003013> ;
   rdfs:label "Clostridium"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D003013> a owl:Class .
-<http://ztonebv.com/MIKG#Bacillus-mycoides>
+<http://ztonebv.com/MIKG4MD#Bacillus-mycoides>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C1038169" ;
   rdfs:label "Bacillus mycoides"@en .
 
-<http://ztonebv.com/MIKG#Bacillus-subtilis>
+<http://ztonebv.com/MIKG4MD#Bacillus-subtilis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0004595" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001412> ;
   rdfs:label "Bacillus subtilis"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D001412> a owl:Class .
-<http://ztonebv.com/MIKG#Escherichia-coli>
+<http://ztonebv.com/MIKG4MD#Escherichia-coli>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0014834" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D004926> ;
   rdfs:label "Escherichia coli"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D004926> a owl:Class .
-<http://ztonebv.com/MIKG#Proteus-vulgaris>
+<http://ztonebv.com/MIKG4MD#Proteus-vulgaris>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0033702" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D011514> ;
   rdfs:label "Proteus vulgaris"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D011514> a owl:Class .
-<http://ztonebv.com/MIKG#Staphylococcus-aureus>
+<http://ztonebv.com/MIKG4MD#Staphylococcus-aureus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0038172" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D013211> ;
   rdfs:label "Staphylococcus aureus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D013211> a owl:Class .
-<http://ztonebv.com/MIKG#Serratia-marcescens>
+<http://ztonebv.com/MIKG4MD#Serratia-marcescens>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0036766" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D012706> ;
   rdfs:label "Serratia marcescens"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D012706> a owl:Class .
-<http://ztonebv.com/MIKG#Bacillus>
+<http://ztonebv.com/MIKG4MD#Bacillus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0004587" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001407> ;
   rdfs:label "Bacillus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D001407> a owl:Class .
-<http://ztonebv.com/MIKG#Yersinia-enterocolitica>
+<http://ztonebv.com/MIKG4MD#Yersinia-enterocolitica>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0043406" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D015008> ;
   rdfs:label "Yersinia enterocolitica"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D015008> a owl:Class .
-<http://ztonebv.com/MIKG#Salmonella-enterica>
+<http://ztonebv.com/MIKG4MD#Salmonella-enterica>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0445750" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D019779> ;
   rdfs:label "Salmonella enterica"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D019779> a owl:Class .
-<http://ztonebv.com/MIKG#Pseudomonas-aeruginosa>
+<http://ztonebv.com/MIKG4MD#Pseudomonas-aeruginosa>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0033809" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D011550> ;
   rdfs:label "Pseudomonas aeruginosa"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D011550> a owl:Class .
-<http://ztonebv.com/MIKG#Oscillibacter>
+<http://ztonebv.com/MIKG4MD#Oscillibacter>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C2288424" ;
   rdfs:label "Oscillibacter"@en .
 
-<http://ztonebv.com/MIKG#Escherichia>
+<http://ztonebv.com/MIKG4MD#Escherichia>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0014833" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D004925> ;
   rdfs:label "Escherichia"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D004925> a owl:Class .
-<http://ztonebv.com/MIKG#Bacteroides>
+<http://ztonebv.com/MIKG4MD#Bacteroides>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0004661" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001439> ;
   rdfs:label "Bacteroides"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D001439> a owl:Class .
-<http://ztonebv.com/MIKG#Parabacteroides>
+<http://ztonebv.com/MIKG4MD#Parabacteroides>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C1927848" ;
   rdfs:label "Parabacteroides"@en .
 
-<http://ztonebv.com/MIKG#Lactobacillus-reuteri>
+<http://ztonebv.com/MIKG4MD#Lactobacillus-reuteri>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0317625" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D052200> ;
   rdfs:label "Lactobacillus reuteri"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D052200> a owl:Class .
-<http://ztonebv.com/MIKG#Bifidobacterium-dentium>
+<http://ztonebv.com/MIKG4MD#Bifidobacterium-dentium>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0314985" ;
   rdfs:label "Bifidobacterium dentium"@en .
 
-<http://ztonebv.com/MIKG#Lactobacillus-brevis>
+<http://ztonebv.com/MIKG4MD#Lactobacillus-brevis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0317604" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D052196> ;
   rdfs:label "Lactobacillus brevis"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D052196> a owl:Class .
-<http://ztonebv.com/MIKG#Lactobacillus-buchneri>
+<http://ztonebv.com/MIKG4MD#Lactobacillus-buchneri>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0317605" ;
   rdfs:label "Lactobacillus buchneri"@en .
 
-<http://ztonebv.com/MIKG#Lactobacillus-paracasei>
+<http://ztonebv.com/MIKG4MD#Lactobacillus-paracasei>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C1080735" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D000069980> ;
   rdfs:label "Lactobacillus paracasei "@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D000069980> a owl:Class .
-<http://ztonebv.com/MIKG#Lactobacillus-rhamnosus>
+<http://ztonebv.com/MIKG4MD#Lactobacillus-rhamnosus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0317597" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D052201> ;
   rdfs:label "Lactobacillus rhamnosus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D052201> a owl:Class .
-<http://ztonebv.com/MIKG#Lactobacillus-delbrueckii>
+<http://ztonebv.com/MIKG4MD#Lactobacillus-delbrueckii>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0317588" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D048668> ;
   rdfs:label "Lactobacillus delbrueckii"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D048668> a owl:Class .
-<http://ztonebv.com/MIKG#Monascus-purpureus>
+<http://ztonebv.com/MIKG4MD#Monascus-purpureus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0997449" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D032741> ;
   rdfs:label "Monascus purpureus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D032741> a owl:Class .
-<http://ztonebv.com/MIKG#Streptococcus-salivarius>
+<http://ztonebv.com/MIKG4MD#Streptococcus-salivarius>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0318179" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D000070001> ;
   rdfs:label "Streptococcus salivarius"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D000070001> a owl:Class .
-<http://ztonebv.com/MIKG#Lactobacillus-vaginalis>
+<http://ztonebv.com/MIKG4MD#Lactobacillus-vaginalis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
   umls:cui "C0445725" ;
   rdfs:label "Lactobacillus vaginalis"@en .
 
-<http://ztonebv.com/MIKG#mentalDisorder>
+<http://ztonebv.com/MIKG4MD#mentalDisorder>
   a rdfs:Class ;
   umls:cui "C0004936" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001523> ;
   rdfs:label "mental Disorders"@en, "精神障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D001523> a owl:Class .
-<http://ztonebv.com/MIKG#Anxiety-disorders>
+<http://ztonebv.com/MIKG4MD#Anxiety-disorders>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
   umls:cui "C0003469" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001008> ;
   rdfs:label "Anxiety disorders"@en, "焦虑症"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D001008> a owl:Class .
-<http://ztonebv.com/MIKG#Depressive-disorder>
+<http://ztonebv.com/MIKG4MD#Depressive-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
   umls:cui "C0011581" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D003866> ;
   rdfs:label "Depressive disorder"@en, "抑郁症"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D003866> a owl:Class .
-<http://ztonebv.com/MIKG#Sleep-disorders>
+<http://ztonebv.com/MIKG4MD#Sleep-disorders>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
   umls:cui "C0851578" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D012893> ;
   rdfs:label "Sleep disorders"@en, "睡眠障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D012893> a owl:Class .
-<http://ztonebv.com/MIKG#Eating-disorders>
+<http://ztonebv.com/MIKG4MD#Eating-disorders>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
   umls:cui "C0013473" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001068> ;
   rdfs:label "Eating disorders"@en, "进食障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D001068> a owl:Class .
-<http://ztonebv.com/MIKG#Sex-behavior-disorder>
+<http://ztonebv.com/MIKG4MD#Sex-behavior-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
   umls:cui "C0221796" ;
   rdfs:label "Sex behavior disorder"@en, "性行为障碍"@zh .
 
-<http://ztonebv.com/MIKG#Personality-disorder>
+<http://ztonebv.com/MIKG4MD#Personality-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
   umls:cui "C0031212" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D010554> ;
   rdfs:label "Personality disorder"@en, "人格障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D010554> a owl:Class .
-<http://ztonebv.com/MIKG#Bipolar-disorder>
+<http://ztonebv.com/MIKG4MD#Bipolar-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
   umls:cui "C0005586" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001714> ;
   rdfs:label "Bipolar disorder"@en, "双相情感障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D001714> a owl:Class .
-<http://ztonebv.com/MIKG#Autistic-disorder>
+<http://ztonebv.com/MIKG4MD#Autistic-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
   umls:cui "C0004352" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001321> ;
   rdfs:label "Autistic disorder"@en, "自闭症"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D001321> a owl:Class .
-<http://ztonebv.com/MIKG#Cognition-disorders>
+<http://ztonebv.com/MIKG4MD#Cognition-disorders>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
   umls:cui "C0009241" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D003072> ;
   rdfs:label "Cognition disorders"@en, "认知障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D003072> a owl:Class .
-<http://ztonebv.com/MIKG#Learning-disorder>
+<http://ztonebv.com/MIKG4MD#Learning-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
   umls:cui "C0023186" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D007859> ;
   rdfs:label "Learning disorder"@en, "学习障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D007859> a owl:Class .
-<http://ztonebv.com/MIKG#reference>
+<http://ztonebv.com/MIKG4MD#reference>
   a rdfs:Class ;
   rdfs:comment "describe which paper the evidence comes from " ;
   rdfs:label "reference"@en, "参考文献"@zh .
 
-<http://ztonebv.com/MIKG#statement>
+<http://ztonebv.com/MIKG4MD#statement>
   a rdfs:Class ;
   rdfs:comment "describe the evidence that concluded from a paper " ;
   rdfs:label "statement"@en, "结论"@zh .
 
-<http://ztonebv.com/MIKG#relationship>
+<http://ztonebv.com/MIKG4MD#relationship>
   a rdfs:Class ;
   rdfs:comment "describe the relationship between Neurotransmitter and mentalDisorder that mentioned in references" ;
   rdfs:label "relationship"@en .
 
-<http://ztonebv.com/MIKG#Valles2019>
-  a <http://ztonebv.com/MIKG#reference> ;
-  mikg:hasPMID "30718848" ;
-  mikg:hasStatement mikg:Valles2019_st1, mikg:Valles2019_st2, mikg:Valles2019_st3, mikg:Valles2019_st4, mikg:Valles2019_st5, mikg:Valles2019_st6, mikg:Valles2019_st7, mikg:Valles2019_st8, mikg:Valles2019_st9, mikg:Valles2019_st10, mikg:Valles2019_st11 .
+<http://ztonebv.com/MIKG4MD#Valles2019>
+  a <http://ztonebv.com/MIKG4MD#reference> ;
+  mikg4md:hasPMID "30718848" ;
+  mikg4md:hasStatement mikg4md:Valles2019_st1, mikg4md:Valles2019_st2, mikg4md:Valles2019_st3, mikg4md:Valles2019_st4, mikg4md:Valles2019_st5, mikg4md:Valles2019_st6, mikg4md:Valles2019_st7, mikg4md:Valles2019_st8, mikg4md:Valles2019_st9, mikg4md:Valles2019_st10, mikg4md:Valles2019_st11 .
 
-mikg:Valles2019_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Valles2019 ;
-  mikg:hasConclusion "B. cereus is a potential serotonin producer" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Valles2019 ;
+  mikg4md:hasConclusion "B. cereus is a potential serotonin producer" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Bacillus-cereus ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Bacillus-cereus ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Valles2019_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Valles2019 ;
-  mikg:hasConclusion "B. oklahomensis is a potential serotonin producer" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Valles2019 ;
+  mikg4md:hasConclusion "B. oklahomensis is a potential serotonin producer" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 n Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Burkholderia-oklahomensis ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Burkholderia-oklahomensis ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Valles2019_st3
-  a mikg:statement ;
-  mikg:hasReference mikg:Valles2019 ;
-  mikg:hasConclusion "A. baumannii is a potential serotonin producer" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st3
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Valles2019 ;
+  mikg4md:hasConclusion "A. baumannii is a potential serotonin producer" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 3 in Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Acinetobacter-baumannii ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Acinetobacter-baumannii ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Valles2019_st4
-  a mikg:statement ;
-  mikg:hasReference mikg:Valles2019 ;
-  mikg:hasConclusion "Paenibacillus is a potential serotonin producer" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st4
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Valles2019 ;
+  mikg4md:hasConclusion "Paenibacillus is a potential serotonin producer" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 4 in Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Paenibacillus ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Paenibacillus ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Valles2019_st5
-  a mikg:statement ;
-  mikg:hasReference mikg:Valles2019 ;
-  mikg:hasConclusion "B. oklahomensis positive correlate with the synthesis of the dopamine" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st5
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Valles2019 ;
+  mikg4md:hasConclusion "B. oklahomensis positive correlate with the synthesis of the dopamine" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 5 in Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Burkholderia-oklahomensis ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Burkholderia-oklahomensis ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Valles2019_st6
-  a mikg:statement ;
-  mikg:hasReference mikg:Valles2019 ;
-  mikg:hasConclusion "The depletion of Coprococcus spp. has a potential role in microbial GABA production in depression patient" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st6
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Valles2019 ;
+  mikg4md:hasConclusion "The depletion of Coprococcus spp. has a potential role in microbial GABA production in depression patient" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 6 in Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Coprococcus ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Coprococcus ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Valles2019_st7
-  a mikg:statement ;
-  mikg:hasReference mikg:Valles2019 ;
-  mikg:hasConclusion "A. baumannii is a type of histamine secreting bacteria" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st7
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Valles2019 ;
+  mikg4md:hasConclusion "A. baumannii is a type of histamine secreting bacteria" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 7 in Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Acinetobacter-baumannii ;
-  mikg:hasNeurotransmitter mikg:Histamine .
+  mikg4md:hasGutMicrobiota mikg4md:Acinetobacter-baumannii ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine .
 
-mikg:Valles2019_st8
-  a mikg:statement ;
-  mikg:hasReference mikg:Valles2019 ;
-  mikg:hasConclusion "F. varium is a type of histamine secreting bacteria" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st8
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Valles2019 ;
+  mikg4md:hasConclusion "F. varium is a type of histamine secreting bacteria" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 8 in Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Fusobacterium-varium ;
-  mikg:hasNeurotransmitter mikg:Histamine .
+  mikg4md:hasGutMicrobiota mikg4md:Fusobacterium-varium ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine .
 
-mikg:Valles2019_st9
-  a mikg:statement ;
-  mikg:hasReference mikg:Valles2019 ;
-  mikg:hasConclusion "F. ulcerans is a type of histamine secreting bacteria" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st9
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Valles2019 ;
+  mikg4md:hasConclusion "F. ulcerans is a type of histamine secreting bacteria" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 9 in Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Fusobacterium-ulcerans ;
-  mikg:hasNeurotransmitter mikg:Histamine .
+  mikg4md:hasGutMicrobiota mikg4md:Fusobacterium-ulcerans ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine .
 
-mikg:Valles2019_st10
-  a mikg:statement ;
-  mikg:hasReference mikg:Valles2019 ;
-  mikg:hasConclusion "B. fragilis is a type of histamine secreting bacteria" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st10
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Valles2019 ;
+  mikg4md:hasConclusion "B. fragilis is a type of histamine secreting bacteria" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 10 in Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Bacteroides-fragilis ;
-  mikg:hasNeurotransmitter mikg:Histamine .
+  mikg4md:hasGutMicrobiota mikg4md:Bacteroides-fragilis ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine .
 
-mikg:Valles2019_st11
-  a mikg:statement ;
-  mikg:hasReference mikg: ;
-  mikg:hasConclusion "A. hydrogeniformans promote the synthesis of acetylcholine in host" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Valles2019_st11
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md: ;
+  mikg4md:hasConclusion "A. hydrogeniformans promote the synthesis of acetylcholine in host" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 11 in Valles2019" ;
-  mikg:hasGutMicrobiota mikg:Acetomicrobium-hydrogeniformans ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine .
+  mikg4md:hasGutMicrobiota mikg4md:Acetomicrobium-hydrogeniformans ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine .
 
-mikg:Liu2016
-  a mikg:reference ;
-  mikg:hasPMID "26522841" ;
-  mikg:hasStatement mikg:Liu2016_st1, mikg:Liu2016_st2 .
+mikg4md:Liu2016
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26522841" ;
+  mikg4md:hasStatement mikg4md:Liu2016_st1, mikg4md:Liu2016_st2 .
 
-mikg:Liu2016_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Liu2016 ;
-  mikg:hasConclusion "L. plantarum significantly increase the level of serotonin in germ-free mice" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Liu2016_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Liu2016 ;
+  mikg4md:hasConclusion "L. plantarum significantly increase the level of serotonin in germ-free mice" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Liu2016" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-plantarum ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-plantarum ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Liu2016_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Liu2016 ;
-  mikg:hasConclusion "The level of dopamine significantly increased in a germ-free mouse carry with L. plantarum strain" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Liu2016_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Liu2016 ;
+  mikg4md:hasConclusion "The level of dopamine significantly increased in a germ-free mouse carry with L. plantarum strain" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 in Liu2016" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-plantarum ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-plantarum ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Yano2015
-  a mikg:reference ;
-  mikg:hasPMID "25860609" ;
-  mikg:hasStatement mikg:Yano2015_st1 .
+mikg4md:Yano2015
+  a mikg4md:reference ;
+  mikg4md:hasPMID "25860609" ;
+  mikg4md:hasStatement mikg4md:Yano2015_st1 .
 
-mikg:Yano2015_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Yano2015 ;
-  mikg:hasConclusion "Indigenous spore-forming of B. uniformis promote serotonin biosynthesis from ECs in mice" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Yano2015_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Yano2015 ;
+  mikg4md:hasConclusion "Indigenous spore-forming of B. uniformis promote serotonin biosynthesis from ECs in mice" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Yano2015" ;
-  mikg:hasGutMicrobiota mikg:Bacteroides-uniformis ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Bacteroides-uniformis ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Mandic2019
-  a mikg:reference ;
-  mikg:hasPMID "30718836" ;
-  mikg:hasStatement mikg:Mandic2019_st1 .
+mikg4md:Mandic2019
+  a mikg4md:reference ;
+  mikg4md:hasPMID "30718836" ;
+  mikg4md:hasStatement mikg4md:Mandic2019_st1 .
 
-mikg:Mandic2019_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Mandic2019 ;
-  mikg:hasConclusion "" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Mandic2019_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Mandic2019 ;
+  mikg4md:hasConclusion "" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Mandic2019" ;
-  mikg:hasGutMicrobiota mikg:Clostridium-ramosum ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Clostridium-ramosum ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Ozogul2004
-  a mikg:reference ;
-  mikg:hasDOI "10.1007/s00217-004-0988-0" ;
-  mikg:hasStatement mikg:Ozogul2004_st1, mikg:Ozogul2004_st2, mikg:Ozogul2004_st3, mikg:Ozogul2004_st4, mikg:Ozogul2004_st5, mikg:Ozogul2004_st6 .
+mikg4md:Ozogul2004
+  a mikg4md:reference ;
+  mikg4md:hasDOI "10.1007/s00217-004-0988-0" ;
+  mikg4md:hasStatement mikg4md:Ozogul2004_st1, mikg4md:Ozogul2004_st2, mikg4md:Ozogul2004_st3, mikg4md:Ozogul2004_st4, mikg4md:Ozogul2004_st5, mikg4md:Ozogul2004_st6 .
 
-mikg:Ozogul2004_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Ozogul2004 ;
-  mikg:hasConclusion "Serotonin were detected in histidine decarboxylase broth that contain the strain of H. alvei" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Ozogul2004_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Ozogul2004 ;
+  mikg4md:hasConclusion "Serotonin were detected in histidine decarboxylase broth that contain the strain of H. alvei" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Ozogul2004" ;
-  mikg:hasGutMicrobiota mikg:Hafnia-alvei ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Hafnia-alvei ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Ozogul2004_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Ozogul2004 ;
-  mikg:hasConclusion "Serotonin were detected in histidine decarboxylase broth that contain the strain of K. pneumoniae" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Ozogul2004_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Ozogul2004 ;
+  mikg4md:hasConclusion "Serotonin were detected in histidine decarboxylase broth that contain the strain of K. pneumoniae" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 in Ozogul2004" ;
-  mikg:hasGutMicrobiota mikg:Klebsiella-pneumoniae ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Klebsiella-pneumoniae ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Ozogul2004_st3
-  a mikg:statement ;
-  mikg:hasReference mikg:Ozogul2004 ;
-  mikg:hasConclusion """Serotonin were detected in histidine decarboxylase broth Broth that contain the strain
+mikg4md:Ozogul2004_st3
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Ozogul2004 ;
+  mikg4md:hasConclusion """Serotonin were detected in histidine decarboxylase broth Broth that contain the strain
                 of M. morganii""" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 3 in Ozogul2004" ;
-  mikg:hasGutMicrobiota mikg:Morganella-morganii ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Morganella-morganii ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Ozogul2004_st4
-  a mikg:statement ;
-  mikg:hasReference mikg:Ozogul2004 ;
-  mikg:hasConclusion "Dopamine were detected in Histidine Decarboxylase Broth that contain the strains of H. alvei" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Ozogul2004_st4
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Ozogul2004 ;
+  mikg4md:hasConclusion "Dopamine were detected in Histidine Decarboxylase Broth that contain the strains of H. alvei" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 4 in Ozogul2004" ;
-  mikg:hasGutMicrobiota mikg:Hafnia-alvei ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Hafnia-alvei ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Ozogul2004_st5
-  a mikg:statement ;
-  mikg:hasReference mikg:Ozogul2004 ;
-  mikg:hasConclusion "Dopamine were detected in Histidine Decarboxylase Broth that contain the strains of K. pneumoniae" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Ozogul2004_st5
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Ozogul2004 ;
+  mikg4md:hasConclusion "Dopamine were detected in Histidine Decarboxylase Broth that contain the strains of K. pneumoniae" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 5 in Ozogul2004" ;
-  mikg:hasGutMicrobiota mikg:Klebsiella-pneumoniae ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Klebsiella-pneumoniae ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Ozogul2004_st6
-  a mikg:statement ;
-  mikg:hasReference mikg:Ozogul2004 ;
-  mikg:hasConclusion "Dopamine were detected in Histidine Decarboxylase Broth that contain the strains of M. morganii" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Ozogul2004_st6
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Ozogul2004 ;
+  mikg4md:hasConclusion "Dopamine were detected in Histidine Decarboxylase Broth that contain the strains of M. morganii" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 6 in Ozogul2004" ;
-  mikg:hasGutMicrobiota mikg:Morganella-morganii ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Morganella-morganii ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Shishov2009
-  a mikg:reference ;
-  mikg:hasPMID "19845286" ;
-  mikg:hasStatement mikg:Shishov2009_st1, mikg:Shishov2009_st2, mikg:Shishov2009_st3 .
+mikg4md:Shishov2009
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19845286" ;
+  mikg4md:hasStatement mikg4md:Shishov2009_st1, mikg4md:Shishov2009_st2, mikg4md:Shishov2009_st3 .
 
-mikg:Shishov2009_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Shishov2009 ;
-  mikg:hasConclusion "E. coli produce serotonin during the late growth phase in M-9 or Lysogeny Broth (LB) culture medium" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Shishov2009_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Shishov2009 ;
+  mikg4md:hasConclusion "E. coli produce serotonin during the late growth phase in M-9 or Lysogeny Broth (LB) culture medium" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Shishov2009" ;
-  mikg:hasGutMicrobiota mikg:Escherichia-coli ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Escherichia-coli ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Shishov2009_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Shishov2009 ;
-  mikg:hasConclusion "The concentration of dopamine increased in E. coli growth culture" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Shishov2009_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Shishov2009 ;
+  mikg4md:hasConclusion "The concentration of dopamine increased in E. coli growth culture" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 in Shishov2009" ;
-  mikg:hasGutMicrobiota mikg:Escherichia-coli ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Escherichia-coli ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Shishov2009_st3
-  a mikg:statement ;
-  mikg:hasReference mikg:Shishov2009 ;
-  mikg:hasConclusion "Norepinephrine can be yield by E. coli in its growth medium" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Shishov2009_st3
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Shishov2009 ;
+  mikg4md:hasConclusion "Norepinephrine can be yield by E. coli in its growth medium" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 3 in Shishov2009" ;
-  mikg:hasGutMicrobiota mikg:Escherichia-coli ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine .
+  mikg4md:hasGutMicrobiota mikg4md:Escherichia-coli ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine .
 
-mikg:Mayr2005
-  a mikg:reference ;
-  mikg:hasPMID "16157477" ;
-  mikg:hasStatement mikg:Mayr2005_st1, mikg:Mayr2005_st2 .
+mikg4md:Mayr2005
+  a mikg4md:reference ;
+  mikg4md:hasPMID "16157477" ;
+  mikg4md:hasStatement mikg4md:Mayr2005_st1, mikg4md:Mayr2005_st2 .
 
-mikg:Mayr2005_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Mayr2005 ;
-  mikg:hasConclusion "C. albicans coats the lining of the intestinal tract and suppresses the ability to produce or secrete serotonin" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Mayr2005_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Mayr2005 ;
+  mikg4md:hasConclusion "C. albicans coats the lining of the intestinal tract and suppresses the ability to produce or secrete serotonin" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Mayr2005" ;
-  mikg:hasGutMicrobiota mikg:Candida-albicans ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Candida-albicans ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Mayr2005_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Mayr2005 ;
-  mikg:hasConclusion "Serotonin has antifungal activity against Candida spp., including C. albicans. " ;
-  mikg:hasRegulation "Inhibit" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Mayr2005_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Mayr2005 ;
+  mikg4md:hasConclusion "Serotonin has antifungal activity against Candida spp., including C. albicans. " ;
+  mikg4md:hasRegulation "Inhibit" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 2 in Mayr2005" ;
-  mikg:hasGutMicrobiota mikg:Candida-albicans ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Candida-albicans ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Ozogul2012
-  a mikg:reference ;
-  mikg:hasDOI "10.3136/fstr.18.795" ;
-  mikg:hasStatement mikg:Ozogul2012_st1, mikg:Ozogul2012_st2, mikg:Ozogul2012_st3 .
+mikg4md:Ozogul2012
+  a mikg4md:reference ;
+  mikg4md:hasDOI "10.3136/fstr.18.795" ;
+  mikg4md:hasStatement mikg4md:Ozogul2012_st1, mikg4md:Ozogul2012_st2, mikg4md:Ozogul2012_st3 .
 
-mikg:Ozogul2012_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Ozogul2012 ;
-  mikg:hasConclusion "L. plantarum can form serotonin in arginine decarboxylase broth" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Ozogul2012_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Ozogul2012 ;
+  mikg4md:hasConclusion "L. plantarum can form serotonin in arginine decarboxylase broth" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Ozogul2012" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-plantarum ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-plantarum ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Ozogul2012_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Ozogul2012 ;
-  mikg:hasConclusion "L. l. lactis can form serotonin in Arginine Decarboxylase Broth" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Ozogul2012_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Ozogul2012 ;
+  mikg4md:hasConclusion "L. l. lactis can form serotonin in Arginine Decarboxylase Broth" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 in Ozogul2012" ;
-  mikg:hasGutMicrobiota mikg:Lactococcus-lactis-subsp-lactis ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Lactococcus-lactis-subsp-lactis ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Ozogul2012_st3
-  a mikg:statement ;
-  mikg:hasReference mikg:Ozogul2012 ;
-  mikg:hasConclusion "L. l. cremoris can form serotonin in Arginine Decarboxylase Broth" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Ozogul2012_st3
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Ozogul2012 ;
+  mikg4md:hasConclusion "L. l. cremoris can form serotonin in Arginine Decarboxylase Broth" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 3 in Ozogul2012" ;
-  mikg:hasGutMicrobiota mikg:Lactococcus-lactis-subsp-cremoris ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Lactococcus-lactis-subsp-cremoris ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Gezginc2013
-  a mikg:reference ;
-  mikg:hasPMID "23265537" ;
-  mikg:hasStatement mikg:Gezginc2013_st1, mikg:Gezginc2013_st2, mikg:Gezginc2013_st3 .
+mikg4md:Gezginc2013
+  a mikg4md:reference ;
+  mikg4md:hasPMID "23265537" ;
+  mikg4md:hasStatement mikg4md:Gezginc2013_st1, mikg4md:Gezginc2013_st2, mikg4md:Gezginc2013_st3 .
 
-mikg:Gezginc2013_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Gezginc2013 ;
-  mikg:hasConclusion "S. thermophilus has the ability to increase the concentration of serotonin in growth medium" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModel "in vivto" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Gezginc2013_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Gezginc2013 ;
+  mikg4md:hasConclusion "S. thermophilus has the ability to increase the concentration of serotonin in growth medium" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModel "in vivto" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Gezginc2013" ;
-  mikg:hasGutMicrobiota mikg:Streptococcus-thermophilus ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Streptococcus-thermophilus ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Gezginc2013_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Gezginc2013 ;
-  mikg:hasConclusion "S. thermophilus has the ability to increase the concentration of dopamine in growth medium" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModel "in vitro" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Gezginc2013_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Gezginc2013 ;
+  mikg4md:hasConclusion "S. thermophilus has the ability to increase the concentration of dopamine in growth medium" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModel "in vitro" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 in Gezginc2013" ;
-  mikg:hasGutMicrobiota mikg:Streptococcus-thermophilus ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Streptococcus-thermophilus ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Gezginc2013_st3
-  a mikg:statement ;
-  mikg:hasReference mikg:Gezginc2013 ;
-  mikg:hasConclusion "S. thermophilus isolates has the ability to produce histamine in growth medium" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Gezginc2013_st3
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Gezginc2013 ;
+  mikg4md:hasConclusion "S. thermophilus isolates has the ability to produce histamine in growth medium" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 3 in Gezginc2013" ;
-  mikg:hasGutMicrobiota mikg:Streptococcus-thermophilus ;
-  mikg:hasNeurotransmitter mikg:Histamine .
+  mikg4md:hasGutMicrobiota mikg4md:Streptococcus-thermophilus ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine .
 
-mikg:Strakhovskaia1993
-  a mikg:reference ;
-  mikg:hasPMID "8505913" ;
-  mikg:hasStatement mikg:Strakhovskaia1993_st1, mikg:Strakhovskaia1993_st2 .
+mikg4md:Strakhovskaia1993
+  a mikg4md:reference ;
+  mikg4md:hasPMID "8505913" ;
+  mikg4md:hasStatement mikg4md:Strakhovskaia1993_st1, mikg4md:Strakhovskaia1993_st2 .
 
-mikg:Strakhovskaia1993_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Strakhovskaia1993 ;
-  mikg:hasConclusion "Bacteria E. faecalis can be growth-stimulated by serotonin" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Strakhovskaia1993_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Strakhovskaia1993 ;
+  mikg4md:hasConclusion "Bacteria E. faecalis can be growth-stimulated by serotonin" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 1 in Strakhovskaia1993" ;
-  mikg:hasGutMicrobiota mikg:Enterococcus-faecalis ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Enterococcus-faecalis ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Strakhovskaia1993_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Strakhovskaia1993 ;
-  mikg:hasConclusion "Yeast C. guilliermondii can be growth-stimulated by serotonin" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Strakhovskaia1993_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Strakhovskaia1993 ;
+  mikg4md:hasConclusion "Yeast C. guilliermondii can be growth-stimulated by serotonin" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 2 in Strakhovskaia1993" ;
-  mikg:hasGutMicrobiota mikg:Pichia-guilliermondii ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Pichia-guilliermondii ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Oleskin1998
-  a mikg:reference ;
-  mikg:hasPMID "9702725" ;
-  mikg:hasStatement mikg:Oleskin1998_st1 .
+mikg4md:Oleskin1998
+  a mikg4md:reference ;
+  mikg4md:hasPMID "9702725" ;
+  mikg4md:hasStatement mikg4md:Oleskin1998_st1 .
 
-mikg:Oleskin1998_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Oleskin1998 ;
-  mikg:hasConclusion "" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Oleskin1998_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Oleskin1998 ;
+  mikg4md:hasConclusion "" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 1 in Oleskin1998" ;
-  mikg:hasGutMicrobiota mikg:Rhodospirillum-rubrum ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Rhodospirillum-rubrum ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Malikina2010
-  a mikg:reference ;
-  mikg:hasPMID "21261078" ;
-  mikg:hasStatement mikg:Malikina2010_st1, mikg:Malikina2010_st2, mikg:Malikina2010_st3 .
+mikg4md:Malikina2010
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21261078" ;
+  mikg4md:hasStatement mikg4md:Malikina2010_st1, mikg4md:Malikina2010_st2, mikg4md:Malikina2010_st3 .
 
-mikg:Malikina2010_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Malikina2010 ;
-  mikg:hasConclusion "The proliferation of S. cerevisiae EPF cells on solid Maltose-Peptone-Yeast extract medium was stimulated by the addition of serotonin" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Malikina2010_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Malikina2010 ;
+  mikg4md:hasConclusion "The proliferation of S. cerevisiae EPF cells on solid Maltose-Peptone-Yeast extract medium was stimulated by the addition of serotonin" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 1 in Malikina2010" ;
-  mikg:hasGutMicrobiota mikg:Saccharomyces-cerevisiae ;
-  mikg:hasNeurotransmitter mikg:Serotonin .
+  mikg4md:hasGutMicrobiota mikg4md:Saccharomyces-cerevisiae ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin .
 
-mikg:Malikina2010_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Malikina2010 ;
-  mikg:hasConclusion "The proliferation of S. cerevisiae EPF cells on solid Maltose-Peptone-Yeast extract medium was stimulated by the addition of dopamine" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "B" ;
+mikg4md:Malikina2010_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Malikina2010 ;
+  mikg4md:hasConclusion "The proliferation of S. cerevisiae EPF cells on solid Maltose-Peptone-Yeast extract medium was stimulated by the addition of dopamine" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "B" ;
   rdfs:label "statement 2 in Malikina2010" ;
-  mikg:hasGutMicrobiota mikg:Saccharomyces-cerevisiae ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Saccharomyces-cerevisiae ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Malikina2010_st3
-  a mikg:statement ;
-  mikg:hasReference mikg:Malikina2010 ;
-  mikg:hasConclusion "Addition of histamine can stimulate the proliferation of S. cerevisiae EPF cells on solid maltose-peptone-yeast extract medium" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Malikina2010_st3
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Malikina2010 ;
+  mikg4md:hasConclusion "Addition of histamine can stimulate the proliferation of S. cerevisiae EPF cells on solid maltose-peptone-yeast extract medium" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 3 in Malikina2010" ;
-  mikg:hasGutMicrobiota mikg:Saccharomyces-cerevisiae ;
-  mikg:hasNeurotransmitter mikg:Histamine .
+  mikg4md:hasGutMicrobiota mikg4md:Saccharomyces-cerevisiae ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine .
 
-mikg:Asano2012
-  a mikg:reference ;
-  mikg:hasPMID "23064760" ;
-  mikg:hasStatement mikg:Asano2012_st1, mikg:Asano2012_st2 .
+mikg4md:Asano2012
+  a mikg4md:reference ;
+  mikg4md:hasPMID "23064760" ;
+  mikg4md:hasStatement mikg4md:Asano2012_st1, mikg4md:Asano2012_st2 .
 
-mikg:Asano2012_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Asano2012 ;
-  mikg:hasConclusion "Substantial levels of free dopamine were identified in the gut lumen of both specific pathogen-free mice and germ-free mice with Clostridium species" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Asano2012_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Asano2012 ;
+  mikg4md:hasConclusion "Substantial levels of free dopamine were identified in the gut lumen of both specific pathogen-free mice and germ-free mice with Clostridium species" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Asano2012" ;
-  mikg:hasGutMicrobiota mikg:Clostridium ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Clostridium ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Asano2012_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Asano2012 ;
-  mikg:hasConclusion "Substantial levels of free norepinephrine were identified in the gut lumen of both specific pathogen-free mice and germ-free mice with Clostridium species" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Asano2012_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Asano2012 ;
+  mikg4md:hasConclusion "Substantial levels of free norepinephrine were identified in the gut lumen of both specific pathogen-free mice and germ-free mice with Clostridium species" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 in Asano2012" ;
-  mikg:hasGutMicrobiota mikg:Clostridium ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine .
+  mikg4md:hasGutMicrobiota mikg4md:Clostridium ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine .
 
-mikg:Tsavkelova2000
-  a mikg:reference ;
-  mikg:hasPMID "10935181" ;
-  mikg:hasStatement mikg:Tsavkelova2000_st1, mikg:Tsavkelova2000_st2, mikg:Tsavkelova2000_st3, mikg:Tsavkelova2000_st4, mikg:Tsavkelova2000_st5, mikg:Tsavkelova2000_st6, mikg:Tsavkelova2000_st7, mikg:Tsavkelova2000_st8, mikg:Tsavkelova2000_st9, mikg:Tsavkelova2000_st10, mikg:Tsavkelova2000_st11 .
+mikg4md:Tsavkelova2000
+  a mikg4md:reference ;
+  mikg4md:hasPMID "10935181" ;
+  mikg4md:hasStatement mikg4md:Tsavkelova2000_st1, mikg4md:Tsavkelova2000_st2, mikg4md:Tsavkelova2000_st3, mikg4md:Tsavkelova2000_st4, mikg4md:Tsavkelova2000_st5, mikg4md:Tsavkelova2000_st6, mikg4md:Tsavkelova2000_st7, mikg4md:Tsavkelova2000_st8, mikg4md:Tsavkelova2000_st9, mikg4md:Tsavkelova2000_st10, mikg4md:Tsavkelova2000_st11 .
 
-mikg:Tsavkelova2000_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "B. cereus has the ability to secrete dopamine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "B. cereus has the ability to secrete dopamine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Bacillus-cereus ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Bacillus-cereus ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Tsavkelova2000_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "B. mycoides has the ability to secrete dopamine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "B. mycoides has the ability to secrete dopamine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Bacillus-mycoides ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Bacillus-mycoides ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Tsavkelova2000_st3
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "B. subtilis has the ability to secrete dopamine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st3
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "B. subtilis has the ability to secrete dopamine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 3 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Bacillus-subtilis ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Bacillus-subtilis ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Tsavkelova2000_st4
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "E. coli has the ability to secrete dopamine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st4
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "E. coli has the ability to secrete dopamine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 4 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Escherichia-coli ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Escherichia-coli ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Tsavkelova2000_st5
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "P. vulgaris has the ability to secrete dopamine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st5
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "P. vulgaris has the ability to secrete dopamine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 5 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Proteus-vulgaris ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Proteus-vulgaris ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Tsavkelova2000_st6
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "S. aureus has the ability to secrete dopamine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st6
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "S. aureus has the ability to secrete dopamine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 6 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Staphylococcus-aureus ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Staphylococcus-aureus ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Tsavkelova2000_st7
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "S. marcescens has the ability to secrete dopamine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st7
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "S. marcescens has the ability to secrete dopamine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 7 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Serratia-marcescens ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Serratia-marcescens ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Tsavkelova2000_st8
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "B. mycoides has the ability to secrete norepinephrine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st8
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "B. mycoides has the ability to secrete norepinephrine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 8 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Bacillus-mycoides ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine .
+  mikg4md:hasGutMicrobiota mikg4md:Bacillus-mycoides ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine .
 
-mikg:Tsavkelova2000_st9
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "B. subtilis has the ability to secrete norepinephrine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st9
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "B. subtilis has the ability to secrete norepinephrine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 9 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Bacillus-subtilis ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine .
+  mikg4md:hasGutMicrobiota mikg4md:Bacillus-subtilis ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine .
 
-mikg:Tsavkelova2000_st10
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "P. vulgaris has the ability to secrete norepinephrine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st10
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "P. vulgaris has the ability to secrete norepinephrine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 10 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Proteus-vulgaris ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine .
+  mikg4md:hasGutMicrobiota mikg4md:Proteus-vulgaris ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine .
 
-mikg:Tsavkelova2000_st11
-  a mikg:statement ;
-  mikg:hasReference mikg:Tsavkelova2000 ;
-  mikg:hasConclusion "S. marcescens has the ability to secrete norepinephrine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Tsavkelova2000_st11
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Tsavkelova2000 ;
+  mikg4md:hasConclusion "S. marcescens has the ability to secrete norepinephrine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 11 in Tsavkelova2000" ;
-  mikg:hasGutMicrobiota mikg:Serratia-marcescens ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine .
+  mikg4md:hasGutMicrobiota mikg4md:Serratia-marcescens ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine .
 
-mikg:Lyte2011
-  a mikg:reference ;
-  mikg:hasPMID "21732396" ;
-  mikg:hasStatement mikg:Lyte2011_st1 .
+mikg4md:Lyte2011
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21732396" ;
+  mikg4md:hasStatement mikg4md:Lyte2011_st1 .
 
-mikg:Lyte2011_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Lyte2011 ;
-  mikg:hasConclusion "The family of Bacillus is a potential bacterium that produce dopamine" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Lyte2011_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Lyte2011 ;
+  mikg4md:hasConclusion "The family of Bacillus is a potential bacterium that produce dopamine" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Lyte2011" ;
-  mikg:hasGutMicrobiota mikg:Bacillus ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Bacillus ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Freestone2007
-  a mikg:reference ;
-  mikg:hasPMID "17229058" ;
-  mikg:hasStatement mikg:Freestone2007_st1, mikg:Freestone2007_st2, mikg:Freestone2007_st3, mikg:Freestone2007_st4, mikg:Freestone2007_st5, mikg:Freestone2007_st6 .
+mikg4md:Freestone2007
+  a mikg4md:reference ;
+  mikg4md:hasPMID "17229058" ;
+  mikg4md:hasStatement mikg4md:Freestone2007_st1, mikg4md:Freestone2007_st2, mikg4md:Freestone2007_st3, mikg4md:Freestone2007_st4, mikg4md:Freestone2007_st5, mikg4md:Freestone2007_st6 .
 
-mikg:Freestone2007_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Freestone2007 ;
-  mikg:hasConclusion "Y. enterocolitica in the gut is response to dopamine" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Freestone2007_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Freestone2007 ;
+  mikg4md:hasConclusion "Y. enterocolitica in the gut is response to dopamine" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 1 in Freestone2007" ;
-  mikg:hasGutMicrobiota mikg:Yersinia-enterocolitica ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Yersinia-enterocolitica ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Freestone2007_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Freestone2007 ;
-  mikg:hasConclusion "S. enterica in the gut is response to dopamine" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Freestone2007_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Freestone2007 ;
+  mikg4md:hasConclusion "S. enterica in the gut is response to dopamine" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 2 in Freestone2007" ;
-  mikg:hasGutMicrobiota mikg:Salmonella-enterica ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Salmonella-enterica ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Freestone2007_st3
-  a mikg:statement ;
-  mikg:hasReference mikg:Freestone2007 ;
-  mikg:hasConclusion "E. coli in the gut is response to dopamine" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Freestone2007_st3
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Freestone2007 ;
+  mikg4md:hasConclusion "E. coli in the gut is response to dopamine" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 3 in Freestone2007" ;
-  mikg:hasGutMicrobiota mikg:Escherichia-coli ;
-  mikg:hasNeurotransmitter mikg:Dopamine .
+  mikg4md:hasGutMicrobiota mikg4md:Escherichia-coli ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine .
 
-mikg:Freestone2007_st4
-  a mikg:statement ;
-  mikg:hasReference mikg:Freestone2007 ;
-  mikg:hasConclusion "Y. enterocolitica in the gut is response to norepinephrine" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Freestone2007_st4
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Freestone2007 ;
+  mikg4md:hasConclusion "Y. enterocolitica in the gut is response to norepinephrine" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 4 in Freestone2007" ;
-  mikg:hasGutMicrobiota mikg:Yersinia-enterocolitica ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine .
+  mikg4md:hasGutMicrobiota mikg4md:Yersinia-enterocolitica ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine .
 
-mikg:Freestone2007_st5
-  a mikg:statement ;
-  mikg:hasReference mikg:Freestone2007 ;
-  mikg:hasConclusion "S. enterica in the gut is response to norepinephrine" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Freestone2007_st5
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Freestone2007 ;
+  mikg4md:hasConclusion "S. enterica in the gut is response to norepinephrine" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 5 in Freestone2007" ;
-  mikg:hasGutMicrobiota mikg:Salmonella-enterica ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine .
+  mikg4md:hasGutMicrobiota mikg4md:Salmonella-enterica ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine .
 
-mikg:Freestone2007_st6
-  a mikg:statement ;
-  mikg:hasReference mikg:Freestone2007 ;
-  mikg:hasConclusion "E. coli in the gut is response to norepinephrine" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Freestone2007_st6
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Freestone2007 ;
+  mikg4md:hasConclusion "E. coli in the gut is response to norepinephrine" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 6 in Freestone2007" ;
-  mikg:hasGutMicrobiota mikg:Escherichia-coli ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine .
+  mikg4md:hasGutMicrobiota mikg4md:Escherichia-coli ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine .
 
-mikg:Hegde2009
-  a mikg:reference ;
-  mikg:hasPMID "19517106" ;
-  mikg:hasStatement mikg:Hegde2009_st1 .
+mikg4md:Hegde2009
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19517106" ;
+  mikg4md:hasStatement mikg4md:Hegde2009_st1 .
 
-mikg:Hegde2009_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Hegde2009 ;
-  mikg:hasConclusion "The hormone norepinephrine increasing P. aeruginosa growth, virulence factor production, and swimming motility" ;
-  mikg:hasRegulation "Promote" ;
-  mikg:hasEvidenceLevel "C" ;
+mikg4md:Hegde2009_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Hegde2009 ;
+  mikg4md:hasConclusion "The hormone norepinephrine increasing P. aeruginosa growth, virulence factor production, and swimming motility" ;
+  mikg4md:hasRegulation "Promote" ;
+  mikg4md:hasEvidenceLevel "C" ;
   rdfs:label "statement 1 in Hegde2009" ;
-  mikg:hasGutMicrobiota mikg:Pseudomonas-aeruginosa ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine .
+  mikg4md:hasGutMicrobiota mikg4md:Pseudomonas-aeruginosa ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine .
 
-mikg:Naseribafroue2014
-  a mikg:reference ;
-  mikg:hasPMID "24888394" ;
-  mikg:hasStatement mikg:Naseribafroue2014_st1 .
+mikg4md:Naseribafroue2014
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24888394" ;
+  mikg4md:hasStatement mikg4md:Naseribafroue2014_st1 .
 
-mikg:Naseribafroue2014_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Naseribafroue2014 ;
-  mikg:hasConclusion "Oscillibacter type strain has valeric acid as its main metabolic end product, a homolog of neurotransmitter GABA" ;
-  mikg:hasEvidenceLevel "A" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Naseribafroue2014_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Naseribafroue2014 ;
+  mikg4md:hasConclusion "Oscillibacter type strain has valeric acid as its main metabolic end product, a homolog of neurotransmitter GABA" ;
+  mikg4md:hasEvidenceLevel "A" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Naseribafroue2014" ;
-  mikg:hasGutMicrobiota mikg:Oscillibacter ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Oscillibacter ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Strandwitz2019
-  a mikg:reference ;
-  mikg:hasPMID "30531975" ;
-  mikg:hasStatement mikg:Strandwitz2019_st1, mikg:Strandwitz2019_st2, mikg:Strandwitz2019_st3 .
+mikg4md:Strandwitz2019
+  a mikg4md:reference ;
+  mikg4md:hasPMID "30531975" ;
+  mikg4md:hasStatement mikg4md:Strandwitz2019_st1, mikg4md:Strandwitz2019_st2, mikg4md:Strandwitz2019_st3 .
 
-mikg:Strandwitz2019_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Strandwitz2019 ;
-  mikg:hasConclusion "The transcriptome analysis of human stool samples from healthy individuals proved that GABA-producing pathways are actively expressed by Bacteroides species" ;
-  mikg:hasEvidenceLevel "A" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Strandwitz2019_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Strandwitz2019 ;
+  mikg4md:hasConclusion "The transcriptome analysis of human stool samples from healthy individuals proved that GABA-producing pathways are actively expressed by Bacteroides species" ;
+  mikg4md:hasEvidenceLevel "A" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Strandwitz2019" ;
-  mikg:hasGutMicrobiota mikg:Bacteroides ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Bacteroides ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Strandwitz2019_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Strandwitz2019 ;
-  mikg:hasConclusion "The transcriptome analysis of human stool samples from healthy individuals proved that GABA-producing pathways are actively expressed by Escherichia species" ;
-  mikg:hasEvidenceLevel "A" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Strandwitz2019_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Strandwitz2019 ;
+  mikg4md:hasConclusion "The transcriptome analysis of human stool samples from healthy individuals proved that GABA-producing pathways are actively expressed by Escherichia species" ;
+  mikg4md:hasEvidenceLevel "A" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 in Strandwitz2019" ;
-  mikg:hasGutMicrobiota mikg:Escherichia ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Escherichia ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Strandwitz2019_st3
-  a mikg:statement ;
-  mikg:hasReference mikg:Strandwitz2019 ;
-  mikg:hasConclusion "The transcriptome analysis of human stool samples from healthy individuals proved that GABA-producing pathways are actively expressed by Parabacteroides species" ;
-  mikg:hasEvidenceLevel "A" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Strandwitz2019_st3
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Strandwitz2019 ;
+  mikg4md:hasConclusion "The transcriptome analysis of human stool samples from healthy individuals proved that GABA-producing pathways are actively expressed by Parabacteroides species" ;
+  mikg4md:hasEvidenceLevel "A" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 3 in Strandwitz2019" ;
-  mikg:hasGutMicrobiota mikg:Parabacteroides ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Parabacteroides ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Kunze2009
-  a mikg:reference ;
-  mikg:hasPMID "19210574" ;
-  mikg:hasStatement mikg:Kunze2009_st1 .
+mikg4md:Kunze2009
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19210574" ;
+  mikg4md:hasStatement mikg4md:Kunze2009_st1 .
 
-mikg:Kunze2009_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Kunze2009 ;
-  mikg:hasConclusion "L. reuteri is a GABA-producing Lactobacillus strain" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Kunze2009_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Kunze2009 ;
+  mikg4md:hasConclusion "L. reuteri is a GABA-producing Lactobacillus strain" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Kunze2009" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-reuteri ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-reuteri ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:DeVadder2018
-  a mikg:reference ;
-  mikg:hasPMID "29866843" ;
-  mikg:hasStatement mikg:DeVadder2018_st1 .
+mikg4md:DeVadder2018
+  a mikg4md:reference ;
+  mikg4md:hasPMID "29866843" ;
+  mikg4md:hasStatement mikg4md:DeVadder2018_st1 .
 
-mikg:DeVadder2018_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:DeVadder2018 ;
-  mikg:hasConclusion "B. dentium can produce GABA in germ-free mice" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:DeVadder2018_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:DeVadder2018 ;
+  mikg4md:hasConclusion "B. dentium can produce GABA in germ-free mice" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in DeVadder2018" ;
-  mikg:hasGutMicrobiota mikg:Bifidobacterium-dentium ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Bifidobacterium-dentium ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Pokusaeve2017
-  a mikg:reference ;
-  mikg:hasPMID "27458085" ;
-  mikg:hasStatement mikg:Pokusaeve2017_st1 .
+mikg4md:Pokusaeve2017
+  a mikg4md:reference ;
+  mikg4md:hasPMID "27458085" ;
+  mikg4md:hasStatement mikg4md:Pokusaeve2017_st1 .
 
-mikg:Pokusaeve2017_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Pokusaeve2017 ;
-  mikg:hasConclusion "B. dentium can produce GABA in sprague-dawly rats" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Pokusaeve2017_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Pokusaeve2017 ;
+  mikg4md:hasConclusion "B. dentium can produce GABA in sprague-dawly rats" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Pokusaeve2017" ;
-  mikg:hasGutMicrobiota mikg:Bifidobacterium-dentium ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Bifidobacterium-dentium ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Bravo2011
-  a mikg:reference ;
-  mikg:hasPMID "21876150" ;
-  mikg:hasStatement mikg:Bravo2011_st1 .
+mikg4md:Bravo2011
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21876150" ;
+  mikg4md:hasStatement mikg4md:Bravo2011_st1 .
 
-mikg:Bravo2011_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Bravo2011 ;
-  mikg:hasConclusion "L. rhamnosus is a GABA-producing Lactobacillus strain" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Bravo2011_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Bravo2011 ;
+  mikg4md:hasConclusion "L. rhamnosus is a GABA-producing Lactobacillus strain" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Bravo2011" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-rhamnosus ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-rhamnosus ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Barrett2012
-  a mikg:reference ;
-  mikg:hasPMID "22612585" ;
-  mikg:hasStatement mikg:Barrett2012_st1, mikg:Barrett2012_st2 .
+mikg4md:Barrett2012
+  a mikg4md:reference ;
+  mikg4md:hasPMID "22612585" ;
+  mikg4md:hasStatement mikg4md:Barrett2012_st1, mikg4md:Barrett2012_st2 .
 
-mikg:Barrett2012_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Barrett2012 ;
-  mikg:hasConclusion "The addition of L. brevis to the culturable gut microbiota increased the GABA concentration in the fermented fecal slurry" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Barrett2012_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Barrett2012 ;
+  mikg4md:hasConclusion "The addition of L. brevis to the culturable gut microbiota increased the GABA concentration in the fermented fecal slurry" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Barrett2012" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-brevis ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-brevis ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Barrett2012_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Barrett2012 ;
-  mikg:hasConclusion "B. dentium can produce GABA in Monosodium Glutamate medium" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Barrett2012_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Barrett2012 ;
+  mikg4md:hasConclusion "B. dentium can produce GABA in Monosodium Glutamate medium" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 in Barrett2012" ;
-  mikg:hasGutMicrobiota mikg:Bifidobacterium-dentium ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Bifidobacterium-dentium ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Wu2018
-  a mikg:reference ;
-  mikg:hasPMID "29300336" ;
-  mikg:hasStatement mikg:Wu2018_st1 .
+mikg4md:Wu2018
+  a mikg4md:reference ;
+  mikg4md:hasPMID "29300336" ;
+  mikg4md:hasStatement mikg4md:Wu2018_st1 .
 
-mikg:Wu2018_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Wu2018 ;
-  mikg:hasConclusion "L. brevis is a GABA-producing Lactobacillus strain" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Wu2018_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Wu2018 ;
+  mikg4md:hasConclusion "L. brevis is a GABA-producing Lactobacillus strain" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Wu2018" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-brevis ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-brevis ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Cho2007
-  a mikg:reference ;
-  mikg:hasPMID "18051360" ;
-  mikg:hasStatement mikg:Cho2007_st1 .
+mikg4md:Cho2007
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18051360" ;
+  mikg4md:hasStatement mikg4md:Cho2007_st1 .
 
-mikg:Cho2007_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Cho2007 ;
-  mikg:hasConclusion "L. buchneri is a GABA-producing Lactobacillus strain" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Cho2007_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Cho2007 ;
+  mikg4md:hasConclusion "L. buchneri is a GABA-producing Lactobacillus strain" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Cho2007" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-buchneri ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-buchneri ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Komatsuzak2005
-  a mikg:reference ;
-  mikg:hasDOI "doi.org/10.1016/j.fm.2005.01.002" ;
-  mikg:hasStatement mikg:Cho2007_st1 .
+mikg4md:Komatsuzak2005
+  a mikg4md:reference ;
+  mikg4md:hasDOI "doi.org/10.1016/j.fm.2005.01.002" ;
+  mikg4md:hasStatement mikg4md:Cho2007_st1 .
 
-mikg:Komatsuzak2005_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Komatsuzak2005 ;
-  mikg:hasConclusion "L. paracasei is a GABA-producing Lactobacillus strain" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Komatsuzak2005_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Komatsuzak2005 ;
+  mikg4md:hasConclusion "L. paracasei is a GABA-producing Lactobacillus strain" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Komatsuzak2005" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-paracasei ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-paracasei ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Siragus2007
-  a mikg:reference ;
-  mikg:hasPMID "17890341" ;
-  mikg:hasStatement mikg:Siragus2007_st1, mikg:Siragus2007_st2, mikg:Siragus2007_st3 .
+mikg4md:Siragus2007
+  a mikg4md:reference ;
+  mikg4md:hasPMID "17890341" ;
+  mikg4md:hasStatement mikg4md:Siragus2007_st1, mikg4md:Siragus2007_st2, mikg4md:Siragus2007_st3 .
 
-mikg:Siragus2007_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Siragus2007 ;
-  mikg:hasConclusion "GABA can be synthesized by Lactic Acid Bacteria L. delbrueckii" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Siragus2007_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Siragus2007 ;
+  mikg4md:hasConclusion "GABA can be synthesized by Lactic Acid Bacteria L. delbrueckii" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Siragus2007" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-delbrueckii ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-delbrueckii ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Siragus2007_st2
-  a mikg:statement ;
-  mikg:hasReference mikg:Siragus2007 ;
-  mikg:hasConclusion "GABA can be synthesized by Lactic Acid Bacteria L. plantarum" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Siragus2007_st2
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Siragus2007 ;
+  mikg4md:hasConclusion "GABA can be synthesized by Lactic Acid Bacteria L. plantarum" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 2 in Siragus2007" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-plantarum ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-plantarum ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Siragus2007_st3
-  a mikg:statement ;
-  mikg:hasReference mikg:Siragus2007 ;
-  mikg:hasConclusion "GABA can be synthesized by Lactic Acid Bacteria L. rhamnosus" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Siragus2007_st3
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Siragus2007 ;
+  mikg4md:hasConclusion "GABA can be synthesized by Lactic Acid Bacteria L. rhamnosus" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 3 in Siragus2007" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-rhamnosus ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-rhamnosus ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Su2003
-  a mikg:reference ;
-  mikg:hasPMID "12545385" ;
-  mikg:hasStatement mikg:Su2003_st1 .
+mikg4md:Su2003
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12545385" ;
+  mikg4md:hasStatement mikg4md:Su2003_st1 .
 
-mikg:Su2003_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Su2003 ;
-  mikg:hasConclusion "The fungus Monascus spp., especially M. purpureus, can produce GABA" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Su2003_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Su2003 ;
+  mikg4md:hasConclusion "The fungus Monascus spp., especially M. purpureus, can produce GABA" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Su2003" ;
-  mikg:hasGutMicrobiota mikg:Monascus-purpureus ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Monascus-purpureus ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Yang2008
-  a mikg:reference ;
-  mikg:hasPMID "17514494" ;
-  mikg:hasStatement mikg:Yang2008_st1 .
+mikg4md:Yang2008
+  a mikg4md:reference ;
+  mikg4md:hasPMID "17514494" ;
+  mikg4md:hasStatement mikg4md:Yang2008_st1 .
 
-mikg:Yang2008_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Yang2008 ;
-  mikg:hasConclusion "GABA formed by S. salivarius subsp. thermophilus via submerged fermentation" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Yang2008_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Yang2008 ;
+  mikg4md:hasConclusion "GABA formed by S. salivarius subsp. thermophilus via submerged fermentation" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Yang2008" ;
-  mikg:hasGutMicrobiota mikg:Streptococcus-salivarius ;
-  mikg:hasNeurotransmitter mikg:GABA .
+  mikg4md:hasGutMicrobiota mikg4md:Streptococcus-salivarius ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
 
-mikg:Kim2000
-  a mikg:reference ;
-  mikg:hasPMID "10678431" ;
-  mikg:hasStatement mikg:Kim2000_st1 .
+mikg4md:Kim2000
+  a mikg4md:reference ;
+  mikg4md:hasPMID "10678431" ;
+  mikg4md:hasStatement mikg4md:Kim2000_st1 .
 
-mikg:Kim2000_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Kim2000 ;
-  mikg:hasConclusion "M. morganii is a type of histamine secreting bacteria" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Kim2000_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Kim2000 ;
+  mikg4md:hasConclusion "M. morganii is a type of histamine secreting bacteria" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Kim2000" ;
-  mikg:hasGutMicrobiota mikg:Morganella-morganii ;
-  mikg:hasNeurotransmitter mikg:Histamine .
+  mikg4md:hasGutMicrobiota mikg4md:Morganella-morganii ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine .
 
-mikg:Scheffer1985
-  a mikg:reference ;
-  mikg:hasPMID "2412960" ;
-  mikg:hasStatement mikg:Scheffer1985_st1 .
+mikg4md:Scheffer1985
+  a mikg4md:reference ;
+  mikg4md:hasPMID "2412960" ;
+  mikg4md:hasStatement mikg4md:Scheffer1985_st1 .
 
-mikg:Scheffer1985_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Scheffer1985 ;
-  mikg:hasConclusion "Bacterial adherence and hemolysin production from E. coli induce histamine release from cells" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Scheffer1985_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Scheffer1985 ;
+  mikg4md:hasConclusion "Bacterial adherence and hemolysin production from E. coli induce histamine release from cells" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Scheffer1985" ;
-  mikg:hasGutMicrobiota mikg:Escherichia-coli ;
-  mikg:hasNeurotransmitter mikg:Histamine .
+  mikg4md:hasGutMicrobiota mikg4md:Escherichia-coli ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine .
 
-mikg:Diaz2015
-  a mikg:reference ;
-  mikg:hasPMID "26394683" ;
-  mikg:hasStatement mikg:Diaz2015_st1 .
+mikg4md:Diaz2015
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26394683" ;
+  mikg4md:hasStatement mikg4md:Diaz2015_st1 .
 
-mikg:Diaz2015_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Diaz2015 ;
-  mikg:hasConclusion "L. vaginalis is a potential histamine-producing strain" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Diaz2015_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Diaz2015 ;
+  mikg4md:hasConclusion "L. vaginalis is a potential histamine-producing strain" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Diaz2015" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-vaginalis ;
-  mikg:hasNeurotransmitter mikg:Histamine .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-vaginalis ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine .
 
-mikg:Stanasze1997
-  a mikg:reference ;
-  mikg:hasPMID "907345" ;
-  mikg:hasStatement mikg:Stanasze1997_st1 .
+mikg4md:Stanasze1997
+  a mikg4md:reference ;
+  mikg4md:hasPMID "907345" ;
+  mikg4md:hasStatement mikg4md:Stanasze1997_st1 .
 
-mikg:Stanasze1997_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Stanasze1997 ;
-  mikg:hasConclusion "Acetylcholine successfully extracted from the growth medium of L. plantarum" ;
-  mikg:hasEvidenceLevel "C" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Stanasze1997_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Stanasze1997 ;
+  mikg4md:hasConclusion "Acetylcholine successfully extracted from the growth medium of L. plantarum" ;
+  mikg4md:hasEvidenceLevel "C" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Stanasze1997" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-plantarum ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine .
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-plantarum ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine .
 
-mikg:Li2010
-  a mikg:reference ;
-  mikg:hasPMID "21070676" ;
-  mikg:hasStatement mikg:Li2010_st1 .
+mikg4md:Li2010
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21070676" ;
+  mikg4md:hasStatement mikg4md:Li2010_st1 .
 
-mikg:Li2010_st1
-  a mikg:statement ;
-  mikg:hasReference mikg:Li2010 ;
-  mikg:hasConclusion "L. brevis exhibits great potential in the production of GABA" ;
-  mikg:hasEvidenceLevel "B" ;
-  mikg:hasModulation "Increase" ;
+mikg4md:Li2010_st1
+  a mikg4md:statement ;
+  mikg4md:hasReference mikg4md:Li2010 ;
+  mikg4md:hasConclusion "L. brevis exhibits great potential in the production of GABA" ;
+  mikg4md:hasEvidenceLevel "B" ;
+  mikg4md:hasModulation "Increase" ;
   rdfs:label "statement 1 in Li2010" ;
-  mikg:hasGutMicrobiota mikg:Lactobacillus-brevis ;
-  mikg:hasNeurotransmitter mikg:GABA .
-
-mikg:relationship_ser_anxiety
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
-  mikg:hasMentalDisorder mikg:Anxiety-disorders ;
-  mikg:hasReference mikg:NMr1, mikg:NMr27, mikg:NMr50, mikg:NMr69, mikg:NMr87 .
-
-mikg:relationship_ser_depressive
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
-  mikg:hasMentalDisorder mikg:Depressive-disorder ;
-  mikg:hasReference mikg:NMr2, mikg:NMr28, mikg:NMr51, mikg:NMr70, mikg:NMr88 .
-
-mikg:relationship_ser_sleep
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
-  mikg:hasMentalDisorder mikg:Sleep-disorders ;
-  mikg:hasReference mikg:NMr3, mikg:NMr29, mikg:NMr52, mikg:NMr71, mikg:NMr13 .
-
-mikg:relationship_ser_eating
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
-  mikg:hasMentalDisorder mikg:Eating-disorders ;
-  mikg:hasReference mikg:NMr4, mikg:NMr30, mikg:NMr53, mikg:NMr72, mikg:NMr89 .
-
-mikg:relationship_ser_sex
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
-  mikg:hasMentalDisorder mikg:Sex-behavior-disorder ;
-  mikg:hasReference mikg:NMr5, mikg:NMr31, mikg:NMr22, mikg:NMr73, mikg:NMr90 .
-
-mikg:relationship_ser_personality
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
-  mikg:hasMentalDisorder mikg:Personality-disorder ;
-  mikg:hasReference mikg:NMr6, mikg:NMr32, mikg:NMr54, mikg:NMr74, mikg:NMr91 .
-
-mikg:relationship_ser_bipolar
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
-  mikg:hasMentalDisorder mikg:Bipolar-disorder ;
-  mikg:hasReference mikg:NMr7, mikg:NMr33, mikg:NMr55, mikg:NMr75, mikg:NMr17 .
-
-mikg:relationship_ser_autistic
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
-  mikg:hasMentalDisorder mikg:Autistic-disorder ;
-  mikg:hasReference mikg:NMr8, mikg:NMr34, mikg:NMr56, mikg:NMr76, mikg:NMr92 .
-
-mikg:relationship_ser_cognition
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
-  mikg:hasMentalDisorder mikg:Cognition-disorders ;
-  mikg:hasReference mikg:NMr9, mikg:NMr35, mikg:NMr57, mikg:NMr77, mikg:NMr93 .
-
-mikg:relationship_ser_learning
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
-  mikg:hasMentalDisorder mikg:Learning-disorder ;
-  mikg:hasReference mikg:NMr10, mikg:NMr36, mikg:NMr58, mikg:NMr78, mikg:NMr94 .
-
-mikg:relationship_dop_anxiety
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
-  mikg:hasMentalDisorder mikg:Anxiety-disorders ;
-  mikg:hasReference mikg:NMr18, mikg:NMr42, mikg:NMr62, mikg:NMr80, mikg:NMr95 .
-
-mikg:relationship_dop_depressive
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
-  mikg:hasMentalDisorder mikg:Depressive-disorder ;
-  mikg:hasReference mikg:NMr19, mikg:NMr42, mikg:NMr63, mikg:NMr81, mikg:NMr96 .
-
-mikg:relationship_dop_sleep
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
-  mikg:hasMentalDisorder mikg:Sleep-disorders ;
-  mikg:hasReference mikg:NMr20, mikg:NMr43, mikg:NMr64, mikg:NMr82, mikg:NMr97 .
-
-mikg:relationship_dop_eating
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
-  mikg:hasMentalDisorder mikg:Eating-disorders ;
-  mikg:hasReference mikg:NMr21, mikg:NMr44, mikg:NMr65, mikg:NMr83, mikg:NMr98 .
-
-mikg:relationship_dop_sex
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
-  mikg:hasMentalDisorder mikg:Sex-behavior-disorder ;
-  mikg:hasReference mikg:NMr22, mikg:NMr45, mikg:NMr66, mikg:NMr84, mikg:NMr99 .
-
-mikg:relationship_dop_personality
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
-  mikg:hasMentalDisorder mikg:Personality-disorder ;
-  mikg:hasReference mikg:NMr23, mikg:NMr46, mikg:NMr67, mikg:NMr32, mikg:NMr100 .
-
-mikg:relationship_dop_bipolar
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
-  mikg:hasMentalDisorder mikg:Bipolar-disorder ;
-  mikg:hasReference mikg:NMr24, mikg:NMr47, mikg:NMr42, mikg:NMr85, mikg:NMr101 .
-
-mikg:relationship_dop_autistic
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
-  mikg:hasMentalDisorder mikg:Autistic-disorder ;
-  mikg:hasReference mikg:NMr25, mikg:NMr48, mikg:NMr68, mikg:NMr86, mikg:NMr102 .
-
-mikg:relationship_dop_learning
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
-  mikg:hasMentalDisorder mikg:Learning-disorder ;
-  mikg:hasReference mikg:NMr26, mikg:NMr49 .
-
-mikg:relationship_nor_anxiety
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
-  mikg:hasMentalDisorder mikg:Anxiety-disorders ;
-  mikg:hasReference mikg:NMr11, mikg:NMr37 .
-
-mikg:relationship_nor_depressive
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
-  mikg:hasMentalDisorder mikg:Depressive-disorder ;
-  mikg:hasReference mikg:NMr12, mikg:NMr38, mikg:NMr59, mikg:NMr11 .
-
-mikg:relationship_nor_sleep
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
-  mikg:hasMentalDisorder mikg:Sleep-disorders ;
-  mikg:hasReference mikg:NMr13, mikg:NMr39, mikg:NMr60, mikg:NMr79 .
-
-mikg:relationship_nor_eating
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
-  mikg:hasMentalDisorder mikg:Eating-disorders ;
-  mikg:hasReference mikg:NMr14 .
-
-mikg:relationship_nor_sex
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
-  mikg:hasMentalDisorder mikg:Sex-behavior-disorder ;
-  mikg:hasReference mikg:NMr15, mikg:NMr40 .
-
-mikg:relationship_nor_personality
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
-  mikg:hasMentalDisorder mikg:Personality-disorder ;
-  mikg:hasReference mikg:NMr16, mikg:NMr41, mikg:NMr61 .
-
-mikg:relationship_nor_bipolar
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
-  mikg:hasMentalDisorder mikg:Bipolar-disorder ;
-  mikg:hasReference mikg:NMr17 .
-
-mikg:relationship_gaba_anxiety
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:GABA ;
-  mikg:hasMentalDisorder mikg:Anxiety-disorders ;
-  mikg:hasReference mikg:NMr103, mikg:NMr123, mikg:NMr138, mikg:NMr149, mikg:NMr159 .
-
-mikg:relationship_gaba_depressive
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:GABA ;
-  mikg:hasMentalDisorder mikg:Depressive-disorder ;
-  mikg:hasReference mikg:NMr104, mikg:NMr124, mikg:NMr138, mikg:NMr150, mikg:NMr160 .
-
-mikg:relationship_gaba_sleep
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:GABA ;
-  mikg:hasMentalDisorder mikg:Sleep-disorders ;
-  mikg:hasReference mikg:NMr105, mikg:NMr125, mikg:NMr139, mikg:NMr151, mikg:NMr161 .
-
-mikg:relationship_gaba_eating
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:GABA ;
-  mikg:hasMentalDisorder mikg:Eating-disorders ;
-  mikg:hasReference mikg:NMr106, mikg:NMr126, mikg:NMr140 .
-
-mikg:relationship_gaba_bipolar
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:GABA ;
-  mikg:hasMentalDisorder mikg:Bipolar-disorder ;
-  mikg:hasReference mikg:NMr107, mikg:NMr127, mikg:NMr141, mikg:NMr152, mikg:NMr162 .
-
-mikg:relationship_gaba_autistic
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:GABA ;
-  mikg:hasMentalDisorder mikg:Autistic-disorder ;
-  mikg:hasReference mikg:NMr108, mikg:NMr128, mikg:NMr142, mikg:NMr153, mikg:NMr163 .
-
-mikg:relationship_gaba_cognition
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:GABA ;
-  mikg:hasMentalDisorder mikg:Cognition-disorders ;
-  mikg:hasReference mikg:NMr109 .
-
-mikg:relationship_gaba_learning
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:GABA ;
-  mikg:hasMentalDisorder mikg:Learning-disorder ;
-  mikg:hasReference mikg:NMr110, mikg:NMr129 .
-
-mikg:relationship_his_anxiety
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
-  mikg:hasMentalDisorder mikg:Anxiety-disorders ;
-  mikg:hasReference mikg:NMr111, mikg:NMr112, mikg:NMr143, mikg:NMr154, mikg:NMr164 .
-
-mikg:relationship_his_depressive
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
-  mikg:hasMentalDisorder mikg:Depressive-disorder ;
-  mikg:hasReference mikg:NMr112, mikg:NMr130 .
-
-mikg:relationship_his_sleep
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
-  mikg:hasMentalDisorder mikg:Sleep-disorders ;
-  mikg:hasReference mikg:NMr113, mikg:NMr131, mikg:NMr116, mikg:NMr134, mikg:NMr155 .
-
-mikg:relationship_his_eating
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
-  mikg:hasMentalDisorder mikg:Eating-disorders ;
-  mikg:hasReference mikg:NMr114, mikg:NMr132 .
-
-mikg:relationship_his_autistic
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
-  mikg:hasMentalDisorder mikg:Autistic-disorder ;
-  mikg:hasReference mikg:NMr115, mikg:NMr133, mikg:NMr144 .
-
-mikg:relationship_his_cognition
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
-  mikg:hasMentalDisorder mikg:Cognition-disorders ;
-  mikg:hasReference mikg:NMr116, mikg:NMr134, mikg:NMr145, mikg:NMr155, mikg:NMr165 .
-
-mikg:relationship_ace_depressive
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
-  mikg:hasMentalDisorder mikg:Depressive-disorder ;
-  mikg:hasReference mikg:NMr117, mikg:NMr135, mikg:NMr146, mikg:NMr156, mikg:NMr166 .
-
-mikg:relationship_ace_sleep
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
-  mikg:hasMentalDisorder mikg:Sleep-disorders ;
-  mikg:hasReference mikg:NMr118 .
-
-mikg:relationship_ace_sex
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
-  mikg:hasMentalDisorder mikg:Sex-behavior-disorder ;
-  mikg:hasReference mikg:NMr119 .
-
-mikg:relationship_ace_bipolar
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
-  mikg:hasMentalDisorder mikg:Bipolar-disorder ;
-  mikg:hasReference mikg:NMr120 .
-
-mikg:relationship_ace_autistic
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
-  mikg:hasMentalDisorder mikg:Autistic-disorder ;
-  mikg:hasReference mikg:NMr121, mikg:NMr136, mikg:NMr147, mikg:NMr157, mikg:NMr167 .
-
-mikg:relationship_ace_cognition
-  a mikg:relationship ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
-  mikg:hasMentalDisorder mikg:Cognition-disorders ;
-  mikg:hasReference mikg:NMr122, mikg:NMr137, mikg:NMr148, mikg:NMr158, mikg:NMr168 .
-
-mikg:NMr1
-  a mikg:reference ;
-  mikg:hasPMID "19423077" .
-
-mikg:NMr2
-  a mikg:reference ;
-  mikg:hasPMID "26654774" .
-
-mikg:NMr3
-  a mikg:reference ;
-  mikg:hasPMID "30288594" .
-
-mikg:NMr4
-  a mikg:reference ;
-  mikg:hasPMID "2197074" .
-
-mikg:NMr5
-  a mikg:reference ;
-  mikg:hasPMID "29198512" .
-
-mikg:NMr6
-  a mikg:reference ;
-  mikg:hasPMID "24751216" .
-
-mikg:NMr7
-  a mikg:reference ;
-  mikg:hasPMID "11532527" .
-
-mikg:NMr8
-  a mikg:reference ;
-  mikg:hasPMID "26577932" .
-
-mikg:NMr9
-  a mikg:reference ;
-  mikg:hasPMID "28123820" .
-
-mikg:NMr10
-  a mikg:reference ;
-  mikg:hasPMID "24430027" .
-
-mikg:NMr11
-  a mikg:reference ;
-  mikg:hasPMID "12817153" .
-
-mikg:NMr12
-  a mikg:reference ;
-  mikg:hasPMID "19272288" .
-
-mikg:NMr13
-  a mikg:reference ;
-  mikg:hasPMID "24746052" .
-
-mikg:NMr14
-  a mikg:reference ;
-  mikg:hasPMID "17148744" .
-
-mikg:NMr15
-  a mikg:reference ;
-  mikg:hasPMID "16020148" .
-
-mikg:NMr16
-  a mikg:reference ;
-  mikg:hasPMID "14572626" .
-
-mikg:NMr17
-  a mikg:reference ;
-  mikg:hasPMID "18402623" .
-
-mikg:NMr18
-  a mikg:reference ;
-  mikg:hasPMID "12027115" .
-
-mikg:NMr19
-  a mikg:reference ;
-  mikg:hasPMID "29573379" .
-
-mikg:NMr20
-  a mikg:reference ;
-  mikg:hasPMID "28728251" .
-
-mikg:NMr21
-  a mikg:reference ;
-  mikg:hasPMID "21350434" .
-
-mikg:NMr22
-  a mikg:reference ;
-  mikg:hasPMID "15488546" .
-
-mikg:NMr23
-  a mikg:reference ;
-  mikg:hasPMID "15039763" .
-
-mikg:NMr24
-  a mikg:reference ;
-  mikg:hasPMID "17688462" .
-
-mikg:NMr25
-  a mikg:reference ;
-  mikg:hasPMID "28750400" .
-
-mikg:NMr26
-  a mikg:reference ;
-  mikg:hasPMID "15152198" .
-
-mikg:NMr27
-  a mikg:reference ;
-  mikg:hasPMID "16979141" .
-
-mikg:NMr28
-  a mikg:reference ;
-  mikg:hasPMID "28342763" .
-
-mikg:NMr29
-  a mikg:reference ;
-  mikg:hasPMID "30029993" .
-
-mikg:NMr30
-  a mikg:reference ;
-  mikg:hasPMID "27579596" .
-
-mikg:NMr31
-  a mikg:reference ;
-  mikg:hasPMID "9627745" .
-
-mikg:NMr32
-  a mikg:reference ;
-  mikg:hasPMID "24432029" .
-
-mikg:NMr33
-  a mikg:reference ;
-  mikg:hasPMID "12519094" .
-
-mikg:NMr34
-  a mikg:reference ;
-  mikg:hasPMID "23959778" .
-
-mikg:NMr35
-  a mikg:reference ;
-  mikg:hasPMID "23535352" .
-
-mikg:NMr36
-  a mikg:reference ;
-  mikg:hasPMID "10821328" .
-
-mikg:NMr37
-  a mikg:reference ;
-  mikg:hasPMID "12490823" .
-
-mikg:NMr38
-  a mikg:reference ;
-  mikg:hasPMID "12208564" .
-
-mikg:NMr39
-  a mikg:reference ;
-  mikg:hasPMID "19833104" .
-
-mikg:NMr40
-  a mikg:reference ;
-  mikg:hasPMID "28237271" .
-
-mikg:NMr41
-  a mikg:reference ;
-  mikg:hasPMID "14712171" .
-
-mikg:NMr42
-  a mikg:reference ;
-  mikg:hasPMID "30269107" .
-
-mikg:NMr43
-  a mikg:reference ;
-  mikg:hasPMID "25466290" .
-
-mikg:NMr44
-  a mikg:reference ;
-  mikg:hasPMID "18262320" .
-
-mikg:NMr45
-  a mikg:reference ;
-  mikg:hasPMID "30536080" .
-
-mikg:NMr46
-  a mikg:reference ;
-  mikg:hasPMID "16623961" .
-
-mikg:NMr47
-  a mikg:reference ;
-  mikg:hasPMID "18331574" .
-
-mikg:NMr48
-  a mikg:reference ;
-  mikg:hasPMID "18754896" .
-
-mikg:NMr49
-  a mikg:reference ;
-  mikg:hasPMID "31118513" .
-
-mikg:NMr50
-  a mikg:reference ;
-  mikg:hasPMID "32002937" .
-
-mikg:NMr51
-  a mikg:reference ;
-  mikg:hasPMID "29265105" .
-
-mikg:NMr52
-  a mikg:reference ;
-  mikg:hasPMID "21459634" .
-
-mikg:NMr53
-  a mikg:reference ;
-  mikg:hasPMID "21243470" .
-
-mikg:NMr54
-  a mikg:reference ;
-  mikg:hasPMID "16690085" .
-
-mikg:NMr55
-  a mikg:reference ;
-  mikg:hasPMID "18444252" .
-
-mikg:NMr56
-  a mikg:reference ;
-  mikg:hasPMID "25070512" .
-
-mikg:NMr57
-  a mikg:reference ;
-  mikg:hasPMID "24802806" .
-
-mikg:NMr58
-  a mikg:reference ;
-  mikg:hasPMID "26257650" .
-
-mikg:NMr59
-  a mikg:reference ;
-  mikg:hasPMID "9169306" .
-
-mikg:NMr60
-  a mikg:reference ;
-  mikg:hasPMID "15301933" .
-
-mikg:NMr61
-  a mikg:reference ;
-  mikg:hasPMID "17169436" .
-
-mikg:NMr62
-  a mikg:reference ;
-  mikg:hasPMID "19180583" .
-
-mikg:NMr63
-  a mikg:reference ;
-  mikg:hasPMID "17339521" .
-
-mikg:NMr64
-  a mikg:reference ;
-  mikg:hasPMID "28782870" .
-
-mikg:NMr65
-  a mikg:reference ;
-  mikg:hasPMID "22579533" .
-
-mikg:NMr66
-  a mikg:reference ;
-  mikg:hasPMID "11312308" .
-
-mikg:NMr67
-  a mikg:reference ;
-  mikg:hasPMID "20205808" .
-
-mikg:NMr68
-  a mikg:reference ;
-  mikg:hasPMID "22015434" .
-
-mikg:NMr69
-  a mikg:reference ;
-  mikg:hasPMID "25955736" .
-
-mikg:NMr70
-  a mikg:reference ;
-  mikg:hasPMID "28485526" .
-
-mikg:NMr71
-  a mikg:reference ;
-  mikg:hasPMID "29845011" .
-
-mikg:NMr72
-  a mikg:reference ;
-  mikg:hasPMID "26574079" .
-
-mikg:NMr73
-  a mikg:reference ;
-  mikg:hasPMID "24239784" .
-
-mikg:NMr74
-  a mikg:reference ;
-  mikg:hasPMID "19032968" .
-
-mikg:NMr75
-  a mikg:reference ;
-  mikg:hasPMID "22993531" .
-
-mikg:NMr76
-  a mikg:reference ;
-  mikg:hasPMID "24613076" .
-
-mikg:NMr77
-  a mikg:reference ;
-  mikg:hasPMID "16842171" .
-
-mikg:NMr78
-  a mikg:reference ;
-  mikg:hasPMID "21276807" .
-
-mikg:NMr79
-  a mikg:reference ;
-  mikg:hasPMID "12938804" .
-
-mikg:NMr80
-  a mikg:reference ;
-  mikg:hasPMID "28377075" .
-
-mikg:NMr81
-  a mikg:reference ;
-  mikg:hasPMID "23235822" .
-
-mikg:NMr82
-  a mikg:reference ;
-  mikg:hasPMID "11087796" .
-
-mikg:NMr83
-  a mikg:reference ;
-  mikg:hasPMID "19728374" .
-
-mikg:NMr84
-  a mikg:reference ;
-  mikg:hasPMID "15236835" .
-
-mikg:NMr85
-  a mikg:reference ;
-  mikg:hasPMID "19922550" .
-
-mikg:NMr86
-  a mikg:reference ;
-  mikg:hasPMID "19120712" .
-
-mikg:NMr87
-  a mikg:reference ;
-  mikg:hasPMID "28867934" .
-
-mikg:NMr88
-  a mikg:reference ;
-  mikg:hasPMID "25625874" .
-
-mikg:NMr89
-  a mikg:reference ;
-  mikg:hasPMID "2252333" .
-
-mikg:NMr90
-  a mikg:reference ;
-  mikg:hasPMID "20704641" .
-
-mikg:NMr91
-  a mikg:reference ;
-  mikg:hasPMID "26983967" .
-
-mikg:NMr92
-  a mikg:reference ;
-  mikg:hasPMID "19949574" .
-
-mikg:NMr93
-  a mikg:reference ;
-  mikg:hasPMID "18729016" .
-
-mikg:NMr94
-  a mikg:reference ;
-  mikg:hasPMID "23104855" .
-
-mikg:NMr95
-  a mikg:reference ;
-  mikg:hasPMID "22832965" .
-
-mikg:NMr96
-  a mikg:reference ;
-  mikg:hasPMID "29106542" .
-
-mikg:NMr97
-  a mikg:reference ;
-  mikg:hasPMID "17035544" .
-
-mikg:NMr98
-  a mikg:reference ;
-  mikg:hasPMID "20417658" .
-
-mikg:NMr99
-  a mikg:reference ;
-  mikg:hasPMID "11477488" .
-
-mikg:NMr100
-  a mikg:reference ;
-  mikg:hasPMID "15121484" .
-
-mikg:NMr101
-  a mikg:reference ;
-  mikg:hasPMID "12232779" .
-
-mikg:NMr102
-  a mikg:reference ;
-  mikg:hasPMID "24780147" .
-
-mikg:NMr103
-  a mikg:reference ;
-  mikg:hasPMID "15131523" .
-
-mikg:NMr104
-  a mikg:reference ;
-  mikg:hasPMID "15757488" .
-
-mikg:NMr105
-  a mikg:reference ;
-  mikg:hasPMID "15575797" .
-
-mikg:NMr106
-  a mikg:reference ;
-  mikg:hasPMID "28546212" .
-
-mikg:NMr107
-  a mikg:reference ;
-  mikg:hasPMID "11377916" .
-
-mikg:NMr108
-  a mikg:reference ;
-  mikg:hasPMID "12165753" .
-
-mikg:NMr109
-  a mikg:reference ;
-  mikg:hasPMID "16368148" .
-
-mikg:NMr110
-  a mikg:reference ;
-  mikg:hasPMID "30300446" .
-
-mikg:NMr111
-  a mikg:reference ;
-  mikg:hasPMID "19357839" .
-
-mikg:NMr112
-  a mikg:reference ;
-  mikg:hasPMID "24920886" .
-
-mikg:NMr113
-  a mikg:reference ;
-  mikg:hasPMID "23229983" .
-
-mikg:NMr114
-  a mikg:reference ;
-  mikg:hasPMID "20864503" .
-
-mikg:NMr115
-  a mikg:reference ;
-  mikg:hasPMID "28485729" .
-
-mikg:NMr116
-  a mikg:reference ;
-  mikg:hasPMID "15530639" .
-
-mikg:NMr117
-  a mikg:reference ;
-  mikg:hasPMID "20614106" .
-
-mikg:NMr118
-  a mikg:reference ;
-  mikg:hasPMID "11208592" .
-
-mikg:NMr119
-  a mikg:reference ;
-  mikg:hasPMID "24561063" .
-
-mikg:NMr120
-  a mikg:reference ;
-  mikg:hasPMID "12769615" .
-
-mikg:NMr121
-  a mikg:reference ;
-  mikg:hasPMID "24096295" .
-
-mikg:NMr122
-  a mikg:reference ;
-  mikg:hasPMID "18183531" .
-
-mikg:NMr123
-  a mikg:reference ;
-  mikg:hasPMID "12662130" .
-
-mikg:NMr124
-  a mikg:reference ;
-  mikg:hasPMID "30718848" .
-
-mikg:NMr125
-  a mikg:reference ;
-  mikg:hasPMID "11983310" .
-
-mikg:NMr126
-  a mikg:reference ;
-  mikg:hasPMID "21524265" .
-
-mikg:NMr127
-  a mikg:reference ;
-  mikg:hasPMID "21074545" .
-
-mikg:NMr128
-  a mikg:reference ;
-  mikg:hasPMID "26186191" .
-
-mikg:NMr129
-  a mikg:reference ;
-  mikg:hasPMID "21376596" .
-
-mikg:NMr130
-  a mikg:reference ;
-  mikg:hasPMID "15255990" .
-
-mikg:NMr131
-  a mikg:reference ;
-  mikg:hasPMID "30059055" .
-
-mikg:NMr132
-  a mikg:reference ;
-  mikg:hasPMID "18814859" .
-
-mikg:NMr133
-  a mikg:reference ;
-  mikg:hasPMID "30166610" .
-
-mikg:NMr134
-  a mikg:reference ;
-  mikg:hasPMID "19758107" .
-
-mikg:NMr135
-  a mikg:reference ;
-  mikg:hasPMID "26982579" .
-
-mikg:NMr136
-  a mikg:reference ;
-  mikg:hasPMID "16023579" .
-
-mikg:NMr137
-  a mikg:reference ;
-  mikg:hasPMID "15179445" .
-
-mikg:NMr138
-  a mikg:reference ;
-  mikg:hasPMID "21889518" .
-
-mikg:NMr139
-  a mikg:reference ;
-  mikg:hasPMID "26052150" .
-
-mikg:NMr140
-  a mikg:reference ;
-  mikg:hasPMID "21750581" .
-
-mikg:NMr141
-  a mikg:reference ;
-  mikg:hasPMID "25738424" .
-
-mikg:NMr142
-  a mikg:reference ;
-  mikg:hasPMID "21766041" .
-
-mikg:NMr143
-  a mikg:reference ;
-  mikg:hasPMID "15078574" .
-
-mikg:NMr144
-  a mikg:reference ;
-  mikg:hasPMID "2556004" .
-
-mikg:NMr145
-  a mikg:reference ;
-  mikg:hasPMID "20166960" .
-
-mikg:NMr146
-  a mikg:reference ;
-  mikg:hasPMID "12140772" .
-
-mikg:NMr147
-  a mikg:reference ;
-  mikg:hasPMID "23638000" .
-
-mikg:NMr148
-  a mikg:reference ;
-  mikg:hasPMID "19223665" .
-
-mikg:NMr149
-  a mikg:reference ;
-  mikg:hasPMID "25653526" .
-
-mikg:NMr150
-  a mikg:reference ;
-  mikg:hasPMID "11986998" .
-
-mikg:NMr151
-  a mikg:reference ;
-  mikg:hasPMID "27150227" .
-
-mikg:NMr152
-  a mikg:reference ;
-  mikg:hasPMID "23253178" .
-
-mikg:NMr153
-  a mikg:reference ;
-  mikg:hasPMID "25072038" .
-
-mikg:NMr154
-  a mikg:reference ;
-  mikg:hasPMID "11113494" .
-
-mikg:NMr155
-  a mikg:reference ;
-  mikg:hasPMID "22070192" .
-
-mikg:NMr156
-  a mikg:reference ;
-  mikg:hasPMID "24901260" .
-
-mikg:NMr157
-  a mikg:reference ;
-  mikg:hasPMID "26074265" .
-
-mikg:NMr158
-  a mikg:reference ;
-  mikg:hasPMID "21741954" .
-
-mikg:NMr159
-  a mikg:reference ;
-  mikg:hasPMID "18206286" .
-
-mikg:NMr160
-  a mikg:reference ;
-  mikg:hasPMID "17118808" .
-
-mikg:NMr161
-  a mikg:reference ;
-  mikg:hasPMID "16395415" .
-
-mikg:NMr162
-  a mikg:reference ;
-  mikg:hasPMID "23634979" .
-
-mikg:NMr163
-  a mikg:reference ;
-  mikg:hasPMID "26469219" .
-
-mikg:NMr164
-  a mikg:reference ;
-  mikg:hasPMID "18477857" .
-
-mikg:NMr165
-  a mikg:reference ;
-  mikg:hasPMID "16565470" .
-
-mikg:NMr166
-  a mikg:reference ;
-  mikg:hasPMID "24983212" .
-
-mikg:NMr167
-  a mikg:reference ;
-  mikg:hasPMID "26337613" .
-
-mikg:NMr168
-  a mikg:reference ;
-  mikg:hasPMID "19351547" .
-
-  <http://ztonebv.com/MIKG#hasKEGG_pathway>
+  mikg4md:hasGutMicrobiota mikg4md:Lactobacillus-brevis ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA .
+
+mikg4md:relationship_ser_anxiety
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
+  mikg4md:hasMentalDisorder mikg4md:Anxiety-disorders ;
+  mikg4md:hasReference mikg4md:NMr1, mikg4md:NMr27, mikg4md:NMr50, mikg4md:NMr69, mikg4md:NMr87 .
+
+mikg4md:relationship_ser_depressive
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
+  mikg4md:hasMentalDisorder mikg4md:Depressive-disorder ;
+  mikg4md:hasReference mikg4md:NMr2, mikg4md:NMr28, mikg4md:NMr51, mikg4md:NMr70, mikg4md:NMr88 .
+
+mikg4md:relationship_ser_sleep
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
+  mikg4md:hasMentalDisorder mikg4md:Sleep-disorders ;
+  mikg4md:hasReference mikg4md:NMr3, mikg4md:NMr29, mikg4md:NMr52, mikg4md:NMr71, mikg4md:NMr13 .
+
+mikg4md:relationship_ser_eating
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
+  mikg4md:hasMentalDisorder mikg4md:Eating-disorders ;
+  mikg4md:hasReference mikg4md:NMr4, mikg4md:NMr30, mikg4md:NMr53, mikg4md:NMr72, mikg4md:NMr89 .
+
+mikg4md:relationship_ser_sex
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
+  mikg4md:hasMentalDisorder mikg4md:Sex-behavior-disorder ;
+  mikg4md:hasReference mikg4md:NMr5, mikg4md:NMr31, mikg4md:NMr22, mikg4md:NMr73, mikg4md:NMr90 .
+
+mikg4md:relationship_ser_personality
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
+  mikg4md:hasMentalDisorder mikg4md:Personality-disorder ;
+  mikg4md:hasReference mikg4md:NMr6, mikg4md:NMr32, mikg4md:NMr54, mikg4md:NMr74, mikg4md:NMr91 .
+
+mikg4md:relationship_ser_bipolar
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
+  mikg4md:hasMentalDisorder mikg4md:Bipolar-disorder ;
+  mikg4md:hasReference mikg4md:NMr7, mikg4md:NMr33, mikg4md:NMr55, mikg4md:NMr75, mikg4md:NMr17 .
+
+mikg4md:relationship_ser_autistic
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
+  mikg4md:hasMentalDisorder mikg4md:Autistic-disorder ;
+  mikg4md:hasReference mikg4md:NMr8, mikg4md:NMr34, mikg4md:NMr56, mikg4md:NMr76, mikg4md:NMr92 .
+
+mikg4md:relationship_ser_cognition
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
+  mikg4md:hasMentalDisorder mikg4md:Cognition-disorders ;
+  mikg4md:hasReference mikg4md:NMr9, mikg4md:NMr35, mikg4md:NMr57, mikg4md:NMr77, mikg4md:NMr93 .
+
+mikg4md:relationship_ser_learning
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
+  mikg4md:hasMentalDisorder mikg4md:Learning-disorder ;
+  mikg4md:hasReference mikg4md:NMr10, mikg4md:NMr36, mikg4md:NMr58, mikg4md:NMr78, mikg4md:NMr94 .
+
+mikg4md:relationship_dop_anxiety
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
+  mikg4md:hasMentalDisorder mikg4md:Anxiety-disorders ;
+  mikg4md:hasReference mikg4md:NMr18, mikg4md:NMr42, mikg4md:NMr62, mikg4md:NMr80, mikg4md:NMr95 .
+
+mikg4md:relationship_dop_depressive
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
+  mikg4md:hasMentalDisorder mikg4md:Depressive-disorder ;
+  mikg4md:hasReference mikg4md:NMr19, mikg4md:NMr42, mikg4md:NMr63, mikg4md:NMr81, mikg4md:NMr96 .
+
+mikg4md:relationship_dop_sleep
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
+  mikg4md:hasMentalDisorder mikg4md:Sleep-disorders ;
+  mikg4md:hasReference mikg4md:NMr20, mikg4md:NMr43, mikg4md:NMr64, mikg4md:NMr82, mikg4md:NMr97 .
+
+mikg4md:relationship_dop_eating
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
+  mikg4md:hasMentalDisorder mikg4md:Eating-disorders ;
+  mikg4md:hasReference mikg4md:NMr21, mikg4md:NMr44, mikg4md:NMr65, mikg4md:NMr83, mikg4md:NMr98 .
+
+mikg4md:relationship_dop_sex
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
+  mikg4md:hasMentalDisorder mikg4md:Sex-behavior-disorder ;
+  mikg4md:hasReference mikg4md:NMr22, mikg4md:NMr45, mikg4md:NMr66, mikg4md:NMr84, mikg4md:NMr99 .
+
+mikg4md:relationship_dop_personality
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
+  mikg4md:hasMentalDisorder mikg4md:Personality-disorder ;
+  mikg4md:hasReference mikg4md:NMr23, mikg4md:NMr46, mikg4md:NMr67, mikg4md:NMr32, mikg4md:NMr100 .
+
+mikg4md:relationship_dop_bipolar
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
+  mikg4md:hasMentalDisorder mikg4md:Bipolar-disorder ;
+  mikg4md:hasReference mikg4md:NMr24, mikg4md:NMr47, mikg4md:NMr42, mikg4md:NMr85, mikg4md:NMr101 .
+
+mikg4md:relationship_dop_autistic
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
+  mikg4md:hasMentalDisorder mikg4md:Autistic-disorder ;
+  mikg4md:hasReference mikg4md:NMr25, mikg4md:NMr48, mikg4md:NMr68, mikg4md:NMr86, mikg4md:NMr102 .
+
+mikg4md:relationship_dop_learning
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
+  mikg4md:hasMentalDisorder mikg4md:Learning-disorder ;
+  mikg4md:hasReference mikg4md:NMr26, mikg4md:NMr49 .
+
+mikg4md:relationship_nor_anxiety
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
+  mikg4md:hasMentalDisorder mikg4md:Anxiety-disorders ;
+  mikg4md:hasReference mikg4md:NMr11, mikg4md:NMr37 .
+
+mikg4md:relationship_nor_depressive
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
+  mikg4md:hasMentalDisorder mikg4md:Depressive-disorder ;
+  mikg4md:hasReference mikg4md:NMr12, mikg4md:NMr38, mikg4md:NMr59, mikg4md:NMr11 .
+
+mikg4md:relationship_nor_sleep
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
+  mikg4md:hasMentalDisorder mikg4md:Sleep-disorders ;
+  mikg4md:hasReference mikg4md:NMr13, mikg4md:NMr39, mikg4md:NMr60, mikg4md:NMr79 .
+
+mikg4md:relationship_nor_eating
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
+  mikg4md:hasMentalDisorder mikg4md:Eating-disorders ;
+  mikg4md:hasReference mikg4md:NMr14 .
+
+mikg4md:relationship_nor_sex
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
+  mikg4md:hasMentalDisorder mikg4md:Sex-behavior-disorder ;
+  mikg4md:hasReference mikg4md:NMr15, mikg4md:NMr40 .
+
+mikg4md:relationship_nor_personality
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
+  mikg4md:hasMentalDisorder mikg4md:Personality-disorder ;
+  mikg4md:hasReference mikg4md:NMr16, mikg4md:NMr41, mikg4md:NMr61 .
+
+mikg4md:relationship_nor_bipolar
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
+  mikg4md:hasMentalDisorder mikg4md:Bipolar-disorder ;
+  mikg4md:hasReference mikg4md:NMr17 .
+
+mikg4md:relationship_gaba_anxiety
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
+  mikg4md:hasMentalDisorder mikg4md:Anxiety-disorders ;
+  mikg4md:hasReference mikg4md:NMr103, mikg4md:NMr123, mikg4md:NMr138, mikg4md:NMr149, mikg4md:NMr159 .
+
+mikg4md:relationship_gaba_depressive
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
+  mikg4md:hasMentalDisorder mikg4md:Depressive-disorder ;
+  mikg4md:hasReference mikg4md:NMr104, mikg4md:NMr124, mikg4md:NMr138, mikg4md:NMr150, mikg4md:NMr160 .
+
+mikg4md:relationship_gaba_sleep
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
+  mikg4md:hasMentalDisorder mikg4md:Sleep-disorders ;
+  mikg4md:hasReference mikg4md:NMr105, mikg4md:NMr125, mikg4md:NMr139, mikg4md:NMr151, mikg4md:NMr161 .
+
+mikg4md:relationship_gaba_eating
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
+  mikg4md:hasMentalDisorder mikg4md:Eating-disorders ;
+  mikg4md:hasReference mikg4md:NMr106, mikg4md:NMr126, mikg4md:NMr140 .
+
+mikg4md:relationship_gaba_bipolar
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
+  mikg4md:hasMentalDisorder mikg4md:Bipolar-disorder ;
+  mikg4md:hasReference mikg4md:NMr107, mikg4md:NMr127, mikg4md:NMr141, mikg4md:NMr152, mikg4md:NMr162 .
+
+mikg4md:relationship_gaba_autistic
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
+  mikg4md:hasMentalDisorder mikg4md:Autistic-disorder ;
+  mikg4md:hasReference mikg4md:NMr108, mikg4md:NMr128, mikg4md:NMr142, mikg4md:NMr153, mikg4md:NMr163 .
+
+mikg4md:relationship_gaba_cognition
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
+  mikg4md:hasMentalDisorder mikg4md:Cognition-disorders ;
+  mikg4md:hasReference mikg4md:NMr109 .
+
+mikg4md:relationship_gaba_learning
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
+  mikg4md:hasMentalDisorder mikg4md:Learning-disorder ;
+  mikg4md:hasReference mikg4md:NMr110, mikg4md:NMr129 .
+
+mikg4md:relationship_his_anxiety
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
+  mikg4md:hasMentalDisorder mikg4md:Anxiety-disorders ;
+  mikg4md:hasReference mikg4md:NMr111, mikg4md:NMr112, mikg4md:NMr143, mikg4md:NMr154, mikg4md:NMr164 .
+
+mikg4md:relationship_his_depressive
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
+  mikg4md:hasMentalDisorder mikg4md:Depressive-disorder ;
+  mikg4md:hasReference mikg4md:NMr112, mikg4md:NMr130 .
+
+mikg4md:relationship_his_sleep
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
+  mikg4md:hasMentalDisorder mikg4md:Sleep-disorders ;
+  mikg4md:hasReference mikg4md:NMr113, mikg4md:NMr131, mikg4md:NMr116, mikg4md:NMr134, mikg4md:NMr155 .
+
+mikg4md:relationship_his_eating
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
+  mikg4md:hasMentalDisorder mikg4md:Eating-disorders ;
+  mikg4md:hasReference mikg4md:NMr114, mikg4md:NMr132 .
+
+mikg4md:relationship_his_autistic
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
+  mikg4md:hasMentalDisorder mikg4md:Autistic-disorder ;
+  mikg4md:hasReference mikg4md:NMr115, mikg4md:NMr133, mikg4md:NMr144 .
+
+mikg4md:relationship_his_cognition
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
+  mikg4md:hasMentalDisorder mikg4md:Cognition-disorders ;
+  mikg4md:hasReference mikg4md:NMr116, mikg4md:NMr134, mikg4md:NMr145, mikg4md:NMr155, mikg4md:NMr165 .
+
+mikg4md:relationship_ace_depressive
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
+  mikg4md:hasMentalDisorder mikg4md:Depressive-disorder ;
+  mikg4md:hasReference mikg4md:NMr117, mikg4md:NMr135, mikg4md:NMr146, mikg4md:NMr156, mikg4md:NMr166 .
+
+mikg4md:relationship_ace_sleep
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
+  mikg4md:hasMentalDisorder mikg4md:Sleep-disorders ;
+  mikg4md:hasReference mikg4md:NMr118 .
+
+mikg4md:relationship_ace_sex
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
+  mikg4md:hasMentalDisorder mikg4md:Sex-behavior-disorder ;
+  mikg4md:hasReference mikg4md:NMr119 .
+
+mikg4md:relationship_ace_bipolar
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
+  mikg4md:hasMentalDisorder mikg4md:Bipolar-disorder ;
+  mikg4md:hasReference mikg4md:NMr120 .
+
+mikg4md:relationship_ace_autistic
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
+  mikg4md:hasMentalDisorder mikg4md:Autistic-disorder ;
+  mikg4md:hasReference mikg4md:NMr121, mikg4md:NMr136, mikg4md:NMr147, mikg4md:NMr157, mikg4md:NMr167 .
+
+mikg4md:relationship_ace_cognition
+  a mikg4md:relationship ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
+  mikg4md:hasMentalDisorder mikg4md:Cognition-disorders ;
+  mikg4md:hasReference mikg4md:NMr122, mikg4md:NMr137, mikg4md:NMr148, mikg4md:NMr158, mikg4md:NMr168 .
+
+mikg4md:NMr1
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19423077" .
+
+mikg4md:NMr2
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26654774" .
+
+mikg4md:NMr3
+  a mikg4md:reference ;
+  mikg4md:hasPMID "30288594" .
+
+mikg4md:NMr4
+  a mikg4md:reference ;
+  mikg4md:hasPMID "2197074" .
+
+mikg4md:NMr5
+  a mikg4md:reference ;
+  mikg4md:hasPMID "29198512" .
+
+mikg4md:NMr6
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24751216" .
+
+mikg4md:NMr7
+  a mikg4md:reference ;
+  mikg4md:hasPMID "11532527" .
+
+mikg4md:NMr8
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26577932" .
+
+mikg4md:NMr9
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28123820" .
+
+mikg4md:NMr10
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24430027" .
+
+mikg4md:NMr11
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12817153" .
+
+mikg4md:NMr12
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19272288" .
+
+mikg4md:NMr13
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24746052" .
+
+mikg4md:NMr14
+  a mikg4md:reference ;
+  mikg4md:hasPMID "17148744" .
+
+mikg4md:NMr15
+  a mikg4md:reference ;
+  mikg4md:hasPMID "16020148" .
+
+mikg4md:NMr16
+  a mikg4md:reference ;
+  mikg4md:hasPMID "14572626" .
+
+mikg4md:NMr17
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18402623" .
+
+mikg4md:NMr18
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12027115" .
+
+mikg4md:NMr19
+  a mikg4md:reference ;
+  mikg4md:hasPMID "29573379" .
+
+mikg4md:NMr20
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28728251" .
+
+mikg4md:NMr21
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21350434" .
+
+mikg4md:NMr22
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15488546" .
+
+mikg4md:NMr23
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15039763" .
+
+mikg4md:NMr24
+  a mikg4md:reference ;
+  mikg4md:hasPMID "17688462" .
+
+mikg4md:NMr25
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28750400" .
+
+mikg4md:NMr26
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15152198" .
+
+mikg4md:NMr27
+  a mikg4md:reference ;
+  mikg4md:hasPMID "16979141" .
+
+mikg4md:NMr28
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28342763" .
+
+mikg4md:NMr29
+  a mikg4md:reference ;
+  mikg4md:hasPMID "30029993" .
+
+mikg4md:NMr30
+  a mikg4md:reference ;
+  mikg4md:hasPMID "27579596" .
+
+mikg4md:NMr31
+  a mikg4md:reference ;
+  mikg4md:hasPMID "9627745" .
+
+mikg4md:NMr32
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24432029" .
+
+mikg4md:NMr33
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12519094" .
+
+mikg4md:NMr34
+  a mikg4md:reference ;
+  mikg4md:hasPMID "23959778" .
+
+mikg4md:NMr35
+  a mikg4md:reference ;
+  mikg4md:hasPMID "23535352" .
+
+mikg4md:NMr36
+  a mikg4md:reference ;
+  mikg4md:hasPMID "10821328" .
+
+mikg4md:NMr37
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12490823" .
+
+mikg4md:NMr38
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12208564" .
+
+mikg4md:NMr39
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19833104" .
+
+mikg4md:NMr40
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28237271" .
+
+mikg4md:NMr41
+  a mikg4md:reference ;
+  mikg4md:hasPMID "14712171" .
+
+mikg4md:NMr42
+  a mikg4md:reference ;
+  mikg4md:hasPMID "30269107" .
+
+mikg4md:NMr43
+  a mikg4md:reference ;
+  mikg4md:hasPMID "25466290" .
+
+mikg4md:NMr44
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18262320" .
+
+mikg4md:NMr45
+  a mikg4md:reference ;
+  mikg4md:hasPMID "30536080" .
+
+mikg4md:NMr46
+  a mikg4md:reference ;
+  mikg4md:hasPMID "16623961" .
+
+mikg4md:NMr47
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18331574" .
+
+mikg4md:NMr48
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18754896" .
+
+mikg4md:NMr49
+  a mikg4md:reference ;
+  mikg4md:hasPMID "31118513" .
+
+mikg4md:NMr50
+  a mikg4md:reference ;
+  mikg4md:hasPMID "32002937" .
+
+mikg4md:NMr51
+  a mikg4md:reference ;
+  mikg4md:hasPMID "29265105" .
+
+mikg4md:NMr52
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21459634" .
+
+mikg4md:NMr53
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21243470" .
+
+mikg4md:NMr54
+  a mikg4md:reference ;
+  mikg4md:hasPMID "16690085" .
+
+mikg4md:NMr55
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18444252" .
+
+mikg4md:NMr56
+  a mikg4md:reference ;
+  mikg4md:hasPMID "25070512" .
+
+mikg4md:NMr57
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24802806" .
+
+mikg4md:NMr58
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26257650" .
+
+mikg4md:NMr59
+  a mikg4md:reference ;
+  mikg4md:hasPMID "9169306" .
+
+mikg4md:NMr60
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15301933" .
+
+mikg4md:NMr61
+  a mikg4md:reference ;
+  mikg4md:hasPMID "17169436" .
+
+mikg4md:NMr62
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19180583" .
+
+mikg4md:NMr63
+  a mikg4md:reference ;
+  mikg4md:hasPMID "17339521" .
+
+mikg4md:NMr64
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28782870" .
+
+mikg4md:NMr65
+  a mikg4md:reference ;
+  mikg4md:hasPMID "22579533" .
+
+mikg4md:NMr66
+  a mikg4md:reference ;
+  mikg4md:hasPMID "11312308" .
+
+mikg4md:NMr67
+  a mikg4md:reference ;
+  mikg4md:hasPMID "20205808" .
+
+mikg4md:NMr68
+  a mikg4md:reference ;
+  mikg4md:hasPMID "22015434" .
+
+mikg4md:NMr69
+  a mikg4md:reference ;
+  mikg4md:hasPMID "25955736" .
+
+mikg4md:NMr70
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28485526" .
+
+mikg4md:NMr71
+  a mikg4md:reference ;
+  mikg4md:hasPMID "29845011" .
+
+mikg4md:NMr72
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26574079" .
+
+mikg4md:NMr73
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24239784" .
+
+mikg4md:NMr74
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19032968" .
+
+mikg4md:NMr75
+  a mikg4md:reference ;
+  mikg4md:hasPMID "22993531" .
+
+mikg4md:NMr76
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24613076" .
+
+mikg4md:NMr77
+  a mikg4md:reference ;
+  mikg4md:hasPMID "16842171" .
+
+mikg4md:NMr78
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21276807" .
+
+mikg4md:NMr79
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12938804" .
+
+mikg4md:NMr80
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28377075" .
+
+mikg4md:NMr81
+  a mikg4md:reference ;
+  mikg4md:hasPMID "23235822" .
+
+mikg4md:NMr82
+  a mikg4md:reference ;
+  mikg4md:hasPMID "11087796" .
+
+mikg4md:NMr83
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19728374" .
+
+mikg4md:NMr84
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15236835" .
+
+mikg4md:NMr85
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19922550" .
+
+mikg4md:NMr86
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19120712" .
+
+mikg4md:NMr87
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28867934" .
+
+mikg4md:NMr88
+  a mikg4md:reference ;
+  mikg4md:hasPMID "25625874" .
+
+mikg4md:NMr89
+  a mikg4md:reference ;
+  mikg4md:hasPMID "2252333" .
+
+mikg4md:NMr90
+  a mikg4md:reference ;
+  mikg4md:hasPMID "20704641" .
+
+mikg4md:NMr91
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26983967" .
+
+mikg4md:NMr92
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19949574" .
+
+mikg4md:NMr93
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18729016" .
+
+mikg4md:NMr94
+  a mikg4md:reference ;
+  mikg4md:hasPMID "23104855" .
+
+mikg4md:NMr95
+  a mikg4md:reference ;
+  mikg4md:hasPMID "22832965" .
+
+mikg4md:NMr96
+  a mikg4md:reference ;
+  mikg4md:hasPMID "29106542" .
+
+mikg4md:NMr97
+  a mikg4md:reference ;
+  mikg4md:hasPMID "17035544" .
+
+mikg4md:NMr98
+  a mikg4md:reference ;
+  mikg4md:hasPMID "20417658" .
+
+mikg4md:NMr99
+  a mikg4md:reference ;
+  mikg4md:hasPMID "11477488" .
+
+mikg4md:NMr100
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15121484" .
+
+mikg4md:NMr101
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12232779" .
+
+mikg4md:NMr102
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24780147" .
+
+mikg4md:NMr103
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15131523" .
+
+mikg4md:NMr104
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15757488" .
+
+mikg4md:NMr105
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15575797" .
+
+mikg4md:NMr106
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28546212" .
+
+mikg4md:NMr107
+  a mikg4md:reference ;
+  mikg4md:hasPMID "11377916" .
+
+mikg4md:NMr108
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12165753" .
+
+mikg4md:NMr109
+  a mikg4md:reference ;
+  mikg4md:hasPMID "16368148" .
+
+mikg4md:NMr110
+  a mikg4md:reference ;
+  mikg4md:hasPMID "30300446" .
+
+mikg4md:NMr111
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19357839" .
+
+mikg4md:NMr112
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24920886" .
+
+mikg4md:NMr113
+  a mikg4md:reference ;
+  mikg4md:hasPMID "23229983" .
+
+mikg4md:NMr114
+  a mikg4md:reference ;
+  mikg4md:hasPMID "20864503" .
+
+mikg4md:NMr115
+  a mikg4md:reference ;
+  mikg4md:hasPMID "28485729" .
+
+mikg4md:NMr116
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15530639" .
+
+mikg4md:NMr117
+  a mikg4md:reference ;
+  mikg4md:hasPMID "20614106" .
+
+mikg4md:NMr118
+  a mikg4md:reference ;
+  mikg4md:hasPMID "11208592" .
+
+mikg4md:NMr119
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24561063" .
+
+mikg4md:NMr120
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12769615" .
+
+mikg4md:NMr121
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24096295" .
+
+mikg4md:NMr122
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18183531" .
+
+mikg4md:NMr123
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12662130" .
+
+mikg4md:NMr124
+  a mikg4md:reference ;
+  mikg4md:hasPMID "30718848" .
+
+mikg4md:NMr125
+  a mikg4md:reference ;
+  mikg4md:hasPMID "11983310" .
+
+mikg4md:NMr126
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21524265" .
+
+mikg4md:NMr127
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21074545" .
+
+mikg4md:NMr128
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26186191" .
+
+mikg4md:NMr129
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21376596" .
+
+mikg4md:NMr130
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15255990" .
+
+mikg4md:NMr131
+  a mikg4md:reference ;
+  mikg4md:hasPMID "30059055" .
+
+mikg4md:NMr132
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18814859" .
+
+mikg4md:NMr133
+  a mikg4md:reference ;
+  mikg4md:hasPMID "30166610" .
+
+mikg4md:NMr134
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19758107" .
+
+mikg4md:NMr135
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26982579" .
+
+mikg4md:NMr136
+  a mikg4md:reference ;
+  mikg4md:hasPMID "16023579" .
+
+mikg4md:NMr137
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15179445" .
+
+mikg4md:NMr138
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21889518" .
+
+mikg4md:NMr139
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26052150" .
+
+mikg4md:NMr140
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21750581" .
+
+mikg4md:NMr141
+  a mikg4md:reference ;
+  mikg4md:hasPMID "25738424" .
+
+mikg4md:NMr142
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21766041" .
+
+mikg4md:NMr143
+  a mikg4md:reference ;
+  mikg4md:hasPMID "15078574" .
+
+mikg4md:NMr144
+  a mikg4md:reference ;
+  mikg4md:hasPMID "2556004" .
+
+mikg4md:NMr145
+  a mikg4md:reference ;
+  mikg4md:hasPMID "20166960" .
+
+mikg4md:NMr146
+  a mikg4md:reference ;
+  mikg4md:hasPMID "12140772" .
+
+mikg4md:NMr147
+  a mikg4md:reference ;
+  mikg4md:hasPMID "23638000" .
+
+mikg4md:NMr148
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19223665" .
+
+mikg4md:NMr149
+  a mikg4md:reference ;
+  mikg4md:hasPMID "25653526" .
+
+mikg4md:NMr150
+  a mikg4md:reference ;
+  mikg4md:hasPMID "11986998" .
+
+mikg4md:NMr151
+  a mikg4md:reference ;
+  mikg4md:hasPMID "27150227" .
+
+mikg4md:NMr152
+  a mikg4md:reference ;
+  mikg4md:hasPMID "23253178" .
+
+mikg4md:NMr153
+  a mikg4md:reference ;
+  mikg4md:hasPMID "25072038" .
+
+mikg4md:NMr154
+  a mikg4md:reference ;
+  mikg4md:hasPMID "11113494" .
+
+mikg4md:NMr155
+  a mikg4md:reference ;
+  mikg4md:hasPMID "22070192" .
+
+mikg4md:NMr156
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24901260" .
+
+mikg4md:NMr157
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26074265" .
+
+mikg4md:NMr158
+  a mikg4md:reference ;
+  mikg4md:hasPMID "21741954" .
+
+mikg4md:NMr159
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18206286" .
+
+mikg4md:NMr160
+  a mikg4md:reference ;
+  mikg4md:hasPMID "17118808" .
+
+mikg4md:NMr161
+  a mikg4md:reference ;
+  mikg4md:hasPMID "16395415" .
+
+mikg4md:NMr162
+  a mikg4md:reference ;
+  mikg4md:hasPMID "23634979" .
+
+mikg4md:NMr163
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26469219" .
+
+mikg4md:NMr164
+  a mikg4md:reference ;
+  mikg4md:hasPMID "18477857" .
+
+mikg4md:NMr165
+  a mikg4md:reference ;
+  mikg4md:hasPMID "16565470" .
+
+mikg4md:NMr166
+  a mikg4md:reference ;
+  mikg4md:hasPMID "24983212" .
+
+mikg4md:NMr167
+  a mikg4md:reference ;
+  mikg4md:hasPMID "26337613" .
+
+mikg4md:NMr168
+  a mikg4md:reference ;
+  mikg4md:hasPMID "19351547" .
+
+  <http://ztonebv.com/MIKG4MD#hasKEGG_pathway>
   a owl:ObjectProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#Neurotransmitter>;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#Neurotransmitter>;
   rdfs:comment "this neurotransmitter is involved in which KEGG pathway"@en .
   
-<http://ztonebv.com/MIKG#hasNeurotransmitter>
+<http://ztonebv.com/MIKG4MD#hasNeurotransmitter>
   a owl:ObjectProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#statement>, <http://ztonebv.com/MIKG#relationship>, <http://ztonebv.com/MIKG#KEGG_pathway> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#statement>, <http://ztonebv.com/MIKG4MD#relationship>, <http://ztonebv.com/MIKG4MD#KEGG_pathway> ;
   rdfs:comment "the statement mentioned this Neurotransmitter"@en .
  
-<http://ztonebv.com/MIKG#hasMapID>
+<http://ztonebv.com/MIKG4MD#hasMapID>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG#KEGG_pathway> ;
+  rdfs:domain <http://ztonebv.com/MIKG4MD#KEGG_pathway> ;
   rdfs:comment "the pathway has a unique map ID in KEGG"@en .
 
-<http://ztonebv.com/MIKG#KEGG_pathway>
+<http://ztonebv.com/MIKG4MD#KEGG_pathway>
   a rdfs:Class ;
   rdfs:label "KEGG pathway"@en .
  
-mikg:KP1
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00380" ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
+mikg4md:KP1
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00380" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
   rdfs:label "Tryptophan metabolism" .
 
-mikg:KP2
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map01063" ;
-  mikg:hasNeurotransmitter mikg:Serotonin, mikg:Dopamine ;
+mikg4md:KP2
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map01063" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin, mikg4md:Dopamine ;
   rdfs:label "Biosynthesis of alkaloids derived from shikimate pathway" .
 
-mikg:KP3
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map01100" ;
-  mikg:hasNeurotransmitter mikg:Serotonin, mikg:Dopamine, mikg:Norepinephrine, mikg:Histamine, mikg:GABA ;
+mikg4md:KP3
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map01100" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin, mikg4md:Dopamine, mikg4md:Norepinephrine, mikg4md:Histamine, mikg4md:GABA ;
   rdfs:label "Metabolic pathways" .
 
-mikg:KP4
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04024" ;
-  mikg:hasNeurotransmitter mikg:Serotonin, mikg:Dopamine, mikg:Norepinephrine, mikg:GABA, mikg:Acetylcholine ;
+mikg4md:KP4
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04024" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin, mikg4md:Dopamine, mikg4md:Norepinephrine, mikg4md:GABA, mikg4md:Acetylcholine ;
   rdfs:label "cAMP signaling pathway" .
 
-mikg:KP5
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04080" ;
-  mikg:hasNeurotransmitter mikg:Serotonin, mikg:Dopamine, mikg:Norepinephrine, mikg:Histamine, mikg:GABA, mikg:Acetylcholine ;
+mikg4md:KP5
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04080" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin, mikg4md:Dopamine, mikg4md:Norepinephrine, mikg4md:Histamine, mikg4md:GABA, mikg4md:Acetylcholine ;
   rdfs:label "Neuroactive ligand-receptor interaction" .
   
-mikg:KP6
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04361" ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
+mikg4md:KP6
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04361" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
   rdfs:label "Axon regeneration" .
   
-mikg:KP7
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04540" ;
-  mikg:hasNeurotransmitter mikg:Serotonin, mikg:Dopamine, mikg:Norepinephrine ;
+mikg4md:KP7
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04540" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin, mikg4md:Dopamine, mikg4md:Norepinephrine ;
   rdfs:label "Gap junction" .
   
-mikg:KP8
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04721" ;
-  mikg:hasNeurotransmitter mikg:Serotonin, mikg:Dopamine, mikg:Norepinephrine, mikg:Histamine, mikg:GABA, mikg:Acetylcholine ;
+mikg4md:KP8
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04721" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin, mikg4md:Dopamine, mikg4md:Norepinephrine, mikg4md:Histamine, mikg4md:GABA, mikg4md:Acetylcholine ;
   rdfs:label "Synaptic vesicle cycle" .
   
-mikg:KP9
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04726" ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
+mikg4md:KP9
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04726" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
   rdfs:label "Serotonergic synapse" .
 
-mikg:KP10
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04742" ;
-  mikg:hasNeurotransmitter mikg:Serotonin, mikg:Norepinephrine, mikg:GABA, mikg:Acetylcholine ;
+mikg4md:KP10
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04742" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin, mikg4md:Norepinephrine, mikg4md:GABA, mikg4md:Acetylcholine ;
   rdfs:label "Taste transduction" .
 
-mikg:KP11
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04750" ;
-  mikg:hasNeurotransmitter mikg:Serotonin, mikg:Histamine ;
+mikg4md:KP11
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04750" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin, mikg4md:Histamine ;
   rdfs:label "Inflammatory mediator regulation of TRP channels" .
 
-mikg:KP12
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04976" ;
-  mikg:hasNeurotransmitter mikg:Serotonin, mikg:Dopamine, mikg:Acetylcholine ;
+mikg4md:KP12
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04976" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin, mikg4md:Dopamine, mikg4md:Acetylcholine ;
   rdfs:label "Bile secretion" .
 
-mikg:KP13
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map07211" ;
-  mikg:hasNeurotransmitter mikg:Serotonin ;
+mikg4md:KP13
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map07211" ;
+  mikg4md:hasNeurotransmitter mikg4md:Serotonin ;
   rdfs:label "Serotonin receptor agonists/antagonists" .  
  
-mikg:KP14
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00350" ;
-  mikg:hasNeurotransmitter mikg:Dopamine, mikg:Norepinephrine ;
+mikg4md:KP14
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00350" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine, mikg4md:Norepinephrine ;
   rdfs:label "Tyrosine metabolism" .
 
-mikg:KP15
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00950" ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
+mikg4md:KP15
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00950" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
   rdfs:label "Isoquinoline alkaloid biosynthesis" .
 
-mikg:KP16
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00965" ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
+mikg4md:KP16
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00965" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
   rdfs:label "Betalain biosynthesis" .
 
-mikg:KP17
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map01060" ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
+mikg4md:KP17
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map01060" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
   rdfs:label "Biosynthesis of plant secondary metabolites" .
   
-mikg:KP18
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map01110" ;
-  mikg:hasNeurotransmitter mikg:Dopamine, mikg:Histamine  ;
+mikg4md:KP18
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map01110" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine, mikg4md:Histamine  ;
   rdfs:label "Biosynthesis of secondary metabolites" .
 
-mikg:KP19
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04728" ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
+mikg4md:KP19
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04728" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
   rdfs:label "Dopaminergic synapse" .
   
-mikg:KP20
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04917" ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
+mikg4md:KP20
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04917" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
   rdfs:label "Prolactin signaling pathwa" .
 
-mikg:KP21
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04810" ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
+mikg4md:KP21
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04810" ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
   rdfs:label "Regulation of actin cytoskeleton" .
   
-mikg:KP22
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map05012" ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
+mikg4md:KP22
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map05012" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
   rdfs:label "Parkinson disease" .
 
-mikg:KP23
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map05030" ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
+mikg4md:KP23
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map05030" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
   rdfs:label "Cocaine addiction" .
 
-mikg:KP24
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map05031" ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
+mikg4md:KP24
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map05031" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
   rdfs:label "Amphetamine addiction" .
 
-mikg:KP25
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map05032" ;
-  mikg:hasNeurotransmitter mikg:Dopamine, mikg:GABA ;
+mikg4md:KP25
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map05032" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine, mikg4md:GABA ;
   rdfs:label "Morphine addiction" .
 
-mikg:KP26
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map05034" ;
-  mikg:hasNeurotransmitter mikg:Dopamine ;
+mikg4md:KP26
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map05034" ;
+  mikg4md:hasNeurotransmitter mikg4md:Dopamine ;
   rdfs:label "Alcoholism" .
 
-mikg:KP27
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map02020" ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
+mikg4md:KP27
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map02020" ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
   rdfs:label "Two-component system" .
 
-mikg:KP28
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map02024" ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine, mikg:GABA ;
+mikg4md:KP28
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map02024" ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine, mikg4md:GABA ;
   rdfs:label "Quorum sensing" .
 
-mikg:KP29
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04261" ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
+mikg4md:KP29
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04261" ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
   rdfs:label "Adrenergic signaling in cardiomyocytes" .
 
-mikg:KP30
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04270" ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
+mikg4md:KP30
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04270" ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
   rdfs:label "Vascular smooth muscle contraction" .
 
-mikg:KP31
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04714" ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
+mikg4md:KP31
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04714" ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
   rdfs:label "Thermogenesis" .
 
-mikg:KP32
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04923" ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
+mikg4md:KP32
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04923" ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
   rdfs:label "Regulation of lipolysis in adipocytes" .
 
-mikg:KP33
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04924" ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine ;
+mikg4md:KP33
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04924" ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine ;
   rdfs:label "Renin secretion" .
 
-mikg:KP34
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04970" ;
-  mikg:hasNeurotransmitter mikg:Norepinephrine, mikg:Acetylcholine ;
+mikg4md:KP34
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04970" ;
+  mikg4md:hasNeurotransmitter mikg4md:Norepinephrine, mikg4md:Acetylcholine ;
   rdfs:label "Salivary secretion" .
 
-mikg:KP35
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00340" ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
+mikg4md:KP35
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00340" ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
   rdfs:label "Histidine metabolism" .
   
-mikg:KP36
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map01065" ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
+mikg4md:KP36
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map01065" ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
   rdfs:label "Biosynthesis of alkaloids derived from histidine and purine" .
 
-mikg:KP37
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04664" ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
+mikg4md:KP37
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04664" ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
   rdfs:label "Fc epsilon RI signaling pathway" .
 
-mikg:KP38
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04725" ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
+mikg4md:KP38
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04725" ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
   rdfs:label "Cholinergic synapse" .
 
-mikg:KP39
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04971" ;
-  mikg:hasNeurotransmitter mikg:Histamine, mikg:Acetylcholine ;
+mikg4md:KP39
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04971" ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine, mikg4md:Acetylcholine ;
   rdfs:label "Gastric acid secretion" .
 
-mikg:KP40
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04974" ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
+mikg4md:KP40
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04974" ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
   rdfs:label "Protein digestion and absorption" .
 
-mikg:KP41
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map05310" ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
+mikg4md:KP41
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map05310" ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
   rdfs:label "Asthma" .
 
-mikg:KP42
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map07227" ;
-  mikg:hasNeurotransmitter mikg:Histamine ;
+mikg4md:KP42
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map07227" ;
+  mikg4md:hasNeurotransmitter mikg4md:Histamine ;
   rdfs:label "Histamine H2/H3 receptor agonists/antagonists" .
 
-mikg:KP43
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00250" ;
-  mikg:hasNeurotransmitter mikg:GABA ;
+mikg4md:KP43
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00250" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
   rdfs:label "Alanine, aspartate and glutamate metabolism" .
 
-mikg:KP44
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00330" ;
-  mikg:hasNeurotransmitter mikg:GABA ;
+mikg4md:KP44
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00330" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
   rdfs:label "Arginine and proline metabolism" .
 
-mikg:KP45
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00410" ;
-  mikg:hasNeurotransmitter mikg:GABA ;
+mikg4md:KP45
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00410" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
   rdfs:label "beta-Alanine metabolism" .
 
-mikg:KP46
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00650" ;
-  mikg:hasNeurotransmitter mikg:GABA ;
+mikg4md:KP46
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00650" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
   rdfs:label "Butanoate metabolism" .
 
-mikg:KP47
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00760" ;
-  mikg:hasNeurotransmitter mikg:GABA ;
+mikg4md:KP47
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00760" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
   rdfs:label "Nicotinate and nicotinamide metabolism" .
 
-mikg:KP48
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map01120" ;
-  mikg:hasNeurotransmitter mikg:GABA ;
+mikg4md:KP48
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map01120" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
   rdfs:label "Microbial metabolism in diverse environments" .
 
-mikg:KP49
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04911" ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
+mikg4md:KP49
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04911" ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
   rdfs:label "Insulin secretion" .
 
-mikg:KP50
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04723" ;
-  mikg:hasNeurotransmitter mikg:GABA ;
+mikg4md:KP50
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04723" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
   rdfs:label "Retrograde endocannabinoid signaling" .
 
-mikg:KP51
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04727" ;
-  mikg:hasNeurotransmitter mikg:GABA ;
+mikg4md:KP51
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04727" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
   rdfs:label "GABAergic synaps" .
   
-mikg:KP52
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04972" ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
+mikg4md:KP52
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04972" ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
   rdfs:label "Pancreatic secretion" .
   
-mikg:KP53
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04915" ;
-  mikg:hasNeurotransmitter mikg:GABA ;
+mikg4md:KP53
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04915" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
   rdfs:label "Estrogen signaling pathway" .
 
-mikg:KP54
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map04929" ;
-  mikg:hasNeurotransmitter mikg:GABA ;
+mikg4md:KP54
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map04929" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA ;
   rdfs:label "GnRH secretion" .
 
-mikg:KP55
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map05033" ;
-  mikg:hasNeurotransmitter mikg:GABA,mikg:Acetylcholine ;
+mikg4md:KP55
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map05033" ;
+  mikg4md:hasNeurotransmitter mikg4md:GABA,mikg4md:Acetylcholine ;
   rdfs:label "Nicotine addiction" .
 
-mikg:KP56
-  a mikg:KEGG_pathway ;
-  mikg:hasMapID "map00564" ;
-  mikg:hasNeurotransmitter mikg:Acetylcholine ;
+mikg4md:KP56
+  a mikg4md:KEGG_pathway ;
+  mikg4md:hasMapID "map00564" ;
+  mikg4md:hasNeurotransmitter mikg4md:Acetylcholine ;
   rdfs:label "Glycerophospholipid metabolism" .
