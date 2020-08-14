@@ -12,23 +12,23 @@ PREFIX ctec: <http://eurecaproject.eu/ctec/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
 PREFIX mesh: <http://id.nlm.nih.gov/mesh/>
-PREFIX mikg: <http://ztonebv.com/MIKG#>
+PREFIX mikg4md: <http://ztonebv.com/MIKG4MD#>
 
 SELECT DISTINCT ?GM ?NTM ?Ref ?PMID ?Level ?MD1 ?MD2
 WHERE {
-       {mikg:Bifidobacterium-dentium rdfs:label ?GM.
-        mikg:Depressive-disorder rdfs:label ?MD1.
-        mikg:Anxiety-disorders rdfs:label ?MD2.
-?s      mikg:hasGutMicrobiota mikg:Bifidobacterium-dentium;
-        mikg:hasNeurotransmitter ?NTM;
-        mikg:hasModulation ?Modulate;
-        mikg:hasReference ?Ref;
-        mikg:hasEvidenceLevel ?Level.
-?Ref    mikg:hasPMID ?PMID.
-?r1     mikg:hasNeurotransmitter ?NTM;
-        mikg:hasMentalDisorder mikg:Depressive-disorder.}
+       {mikg4md:Bifidobacterium-dentium rdfs:label ?GM.
+        mikg4md:Depressive-disorder rdfs:label ?MD1.
+        mikg4md:Anxiety-disorders rdfs:label ?MD2.
+?s      mikg4md:hasGutMicrobiota mikg4md:Bifidobacterium-dentium;
+        mikg4md:hasNeurotransmitter ?NTM;
+        mikg4md:hasModulation ?Modulate;
+        mikg4md:hasReference ?Ref;
+        mikg4md:hasEvidenceLevel ?Level.
+?Ref    mikg4md:hasPMID ?PMID.
+?r1     mikg4md:hasNeurotransmitter ?NTM;
+        mikg4md:hasMentalDisorder mikg4md:Depressive-disorder.}
 UNION
-{?r2    mikg:hasMentalDisorder mikg:Anxiety-disorders.}
+{?r2    mikg4md:hasMentalDisorder mikg4md:Anxiety-disorders.}
 FILTER (lang(?MD1)='en')
 FILTER (lang(?MD2)='en')
     }
@@ -44,20 +44,20 @@ PREFIX ctec: <http://eurecaproject.eu/ctec/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
 PREFIX mesh: <http://id.nlm.nih.gov/mesh/>
-PREFIX mikg: <http://ztonebv.com/MIKG#>
+PREFIX mikg4md: <http://ztonebv.com/MIKG4MD#>
 
 SELECT  DISTINCT  ?GM ?NTM ?Modulate ?Level ?Ref ?PMID ?MD
 WHERE {
-       {mikg:Acetylcholine rdfs:label ?NTM.
-?s      mikg:hasNeurotransmitter mikg:Acetylcholine;
-        mikg:hasGutMicrobiota ?Microbiota;
-        mikg:hasModulation ?Modulate;
-        mikg:hasEvidenceLevel ?Level;
-        mikg:hasReference ?Ref.
-?Ref    mikg:hasPMID ?PMID.
+       {mikg4md:Acetylcholine rdfs:label ?NTM.
+?s      mikg4md:hasNeurotransmitter mikg4md:Acetylcholine;
+        mikg4md:hasGutMicrobiota ?Microbiota;
+        mikg4md:hasModulation ?Modulate;
+        mikg4md:hasEvidenceLevel ?Level;
+        mikg4md:hasReference ?Ref.
+?Ref    mikg4md:hasPMID ?PMID.
 ?Microbiota rdfs:label ?GM.
-?r      mikg:hasNeurotransmitter mikg:Acetylcholine;
-        mikg:hasMentalDisorder ?Disorder.
+?r      mikg4md:hasNeurotransmitter mikg4md:Acetylcholine;
+        mikg4md:hasMentalDisorder ?Disorder.
 ?Disorder rdfs:label ?MD.}
 FILTER (lang(?MD)='en')
 FILTER (lang(?NTM)='en')
@@ -75,24 +75,24 @@ PREFIX ctec: <http://eurecaproject.eu/ctec/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
 PREFIX mesh: <http://id.nlm.nih.gov/mesh/>
-PREFIX mikg: <http://ztonebv.com/MIKG#>
+PREFIX mikg4md: <http://ztonebv.com/MIKG4MD#>
 
 SELECT DISTINCT ?GM ?NTM1 ?NTM2 ?Level ?Ref ?PMID ?MD
 WHERE {
-       {mikg:Bipolar-disorder rdfs:label ?MD.
-        mikg:Dopamine rdfs:label ?NTM1.
-        mikg:Norepinephrine rdfs:label ?NTM2.
-?s1     mikg:hasNeurotransmitter mikg:Dopamine;
-        mikg:hasGutMicrobiota ?GM;
-        mikg:hasEvidenceLevel ?Level;
-        mikg:hasModulation ?Modulate;
-        mikg:hasReference ?Ref.
-?Ref    mikg:hasPMID ?PMID.
-?r      mikg:hasMentalDisorder mikg:Bipolar-disorder.}
+       {mikg4md:Bipolar-disorder rdfs:label ?MD.
+        mikg4md:Dopamine rdfs:label ?NTM1.
+        mikg4md:Norepinephrine rdfs:label ?NTM2.
+?s1     mikg4md:hasNeurotransmitter mikg4md:Dopamine;
+        mikg4md:hasGutMicrobiota ?GM;
+        mikg4md:hasEvidenceLevel ?Level;
+        mikg4md:hasModulation ?Modulate;
+        mikg4md:hasReference ?Ref.
+?Ref    mikg4md:hasPMID ?PMID.
+?r      mikg4md:hasMentalDisorder mikg4md:Bipolar-disorder.}
 FILTER EXISTS
-{?s2    mikg:hasNeurotransmitter mikg:Norepinephrine;
-        mikg:hasGutMicrobiota ?GM;
-        mikg:hasModulation ?Modulate.}
+{?s2    mikg4md:hasNeurotransmitter mikg4md:Norepinephrine;
+        mikg4md:hasGutMicrobiota ?GM;
+        mikg4md:hasModulation ?Modulate.}
 FILTER (lang(?MD)='en')
 FILTER (lang(?NTM1)='en')
 FILTER (lang(?NTM2)='en')
