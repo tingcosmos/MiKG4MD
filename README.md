@@ -18,4 +18,4 @@ The Schema Data of MiKG4MD, SPARQL query codes, and SPARQL results of three test
     doi = {},
 }`
 # Contact information
-For help or issues using MiKG4MD, please contact `Ting Liu (t.liu@vu.nl)`.
+For help or issues using MiKG4MD, please contact Ting Liu (`t.liu@vu.nl`or`ting.liu.vu@hotmail.com`).
