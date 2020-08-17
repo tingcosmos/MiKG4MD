@@ -3,7 +3,7 @@ This repository provides the code for MiKG4MD (Microbiota Knowledge Graph for Me
 # SPARQL
 We provide three SPARQL query cases with codes and results. Users can perform their own queries by changing parameters in templates that we designed. We use several abbreviations in the following query codes and results. 'Ref' is an abbreviation for reference. 'Level' refers to the evidence level the reference. 'PMID' is the unique identifier number of a reference in PubMed. Other abbreviations: GM, gut microbiota; NTM, neurotransmitter; MD, mental disorder. 
 # Download
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+[Schema data of MiKG4MD](docs/mikg_schema_data.ttl)
 # Citation
 `@article{liu2020mikg4md,
     author = {Liu, Ting and Pan, Xueli and Wang, Xu and Feenstra, K Anton and Heringa, Jaap and Huang, Zhisheng},
