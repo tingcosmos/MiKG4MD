@@ -3,595 +3,595 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix umls: <http://bioportal.bioontology.org/ontologies/umls#> .
 @prefix mesh2020: <http://id.nlm.nih.gov/mesh/2020/>.
-@prefix mikg4md: <http://ztonebv.com/MIKG4MD#> .
+@prefix mikg4md: <http://ztonebv.com/MiKG4MD#> .
 
 <http://bioportal.bioontology.org/ontologies/umls#cui> a owl:AnnotationProperty .
-<http://ztonebv.com/MIKG4MD#hasReference>
+<http://ztonebv.com/MiKG4MD#hasReference>
   a owl:ObjectProperty ;
-  owl:inverseOf <http://ztonebv.com/MIKG4MD#hasStatement> ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#statement>, <http://ztonebv.com/MIKG4MD#relationship> ;
-  rdfs:range <http://ztonebv.com/MIKG4MD#reference> ;
+  owl:inverseOf <http://ztonebv.com/MiKG4MD#hasStatement> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#statement>, <http://ztonebv.com/MiKG4MD#relationship> ;
+  rdfs:range <http://ztonebv.com/MiKG4MD#reference> ;
   rdfs:comment "this conclusion or statement is from which paper"@en .
 
-<http://ztonebv.com/MIKG4MD#hasStatement>
+<http://ztonebv.com/MiKG4MD#hasStatement>
   a owl:ObjectProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#reference> ;
-  rdfs:range <http://ztonebv.com/MIKG4MD#statement> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#reference> ;
+  rdfs:range <http://ztonebv.com/MiKG4MD#statement> ;
   rdfs:comment "the reference paper states what evidence"@en .
 
-<http://ztonebv.com/MIKG4MD#hasGutMicrobiota>
+<http://ztonebv.com/MiKG4MD#hasGutMicrobiota>
   a owl:ObjecttypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#statement> ;
   rdfs:comment "the statement mentioned this gut microbiota"@en .
 
-<http://ztonebv.com/MIKG4MD#hasNeurotransmitter>
+<http://ztonebv.com/MiKG4MD#hasNeurotransmitter>
   a owl:ObjecttypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#statement>, <http://ztonebv.com/MIKG4MD#relationship> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#statement>, <http://ztonebv.com/MiKG4MD#relationship> ;
   rdfs:comment "the statement mentioned this Neurotransmitter"@en .
 
-<http://ztonebv.com/MIKG4MD#hasMentalDisorder>
+<http://ztonebv.com/MiKG4MD#hasMentalDisorder>
   a owl:ObjecttypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#statement>, <http://ztonebv.com/MIKG4MD#relationship> .
+  rdfs:domain <http://ztonebv.com/MiKG4MD#statement>, <http://ztonebv.com/MiKG4MD#relationship> .
 
-<http://ztonebv.com/MIKG4MD#hasConclusion>
+<http://ztonebv.com/MiKG4MD#hasConclusion>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#statement> ;
   rdfs:comment "the conclusion from reference papers"@en .
 
-<http://ztonebv.com/MIKG4MD#hasRegulation>
+<http://ztonebv.com/MiKG4MD#hasRegulation>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#statement> ;
   rdfs:comment "the statement has regulation type: inhibit or promote"@en .
 
-<http://ztonebv.com/MIKG4MD#hasEvidenceLevel>
+<http://ztonebv.com/MiKG4MD#hasEvidenceLevel>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#statement> ;
   rdfs:comment "evidence level ranging from A to E"@en .
 
-<http://ztonebv.com/MIKG4MD#hasModel>
+<http://ztonebv.com/MiKG4MD#hasModel>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#statement> ;
   rdfs:comment "there are two models"@en .
 
-<http://ztonebv.com/MIKG4MD#hasModulation>
+<http://ztonebv.com/MiKG4MD#hasModulation>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#statement> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#statement> ;
   rdfs:comment "the statement has modulation type: increase or decrease"@en .
 
-<http://ztonebv.com/MIKG4MD#hasPMID>
+<http://ztonebv.com/MiKG4MD#hasPMID>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#reference> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#reference> ;
   rdfs:comment "the PubMed ID of the reference, such as 30718848"@en ;
   rdfs:range rdf:XMLLiteral .
 
-<http://ztonebv.com/MIKG4MD#hasDOI>
+<http://ztonebv.com/MiKG4MD#hasDOI>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#reference> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#reference> ;
   rdfs:comment "the DOI of the reference"@en .
 
-<http://ztonebv.com/MIKG4MD#hasRefID>
+<http://ztonebv.com/MiKG4MD#hasRefID>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#reference> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#reference> ;
   rdfs:comment "the referenceID including author and published year such as Valles2019"@en .
 
-<http://ztonebv.com/MIKG4MD#Neurotransmitter>
+<http://ztonebv.com/MiKG4MD#Neurotransmitter>
   a rdfs:Class ;
   umls:cui "C0027908" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D018377> ;
   rdfs:label "Neurotransmitter"@en, "神经递质"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D018377> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Dopamine>
+<http://ztonebv.com/MiKG4MD#Dopamine>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#Neurotransmitter> ;
   umls:cui "C0013030" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D004298> ;
   rdfs:label "Dopamine"@en, "多巴胺"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D004298> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Serotonin>
+<http://ztonebv.com/MiKG4MD#Serotonin>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#Neurotransmitter> ;
   umls:cui "C0036751" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D012701> ;
   rdfs:label "Serotonin"@en, "血清素"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D012701> a owl:Class .
-<http://ztonebv.com/MIKG4MD#gamma-Aminobutyric-Acid>
+<http://ztonebv.com/MiKG4MD#gamma-Aminobutyric-Acid>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#Neurotransmitter> ;
   umls:cui "C0016904" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D005680> ;
   rdfs:label "Gamma-Aminobutyric Acid"@en, "r-氨基丁酸"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D005680> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Norepinephrine>
+<http://ztonebv.com/MiKG4MD#Norepinephrine>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#Neurotransmitter> ;
   umls:cui "C0028351" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D009638> ;
   rdfs:label "Norepinephrine"@en, "去甲肾上腺素"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D009638> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Histamine>
+<http://ztonebv.com/MiKG4MD#Histamine>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#Neurotransmitter> ;
   umls:cui "C0019588" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D006632> ;
   rdfs:label "Histamine"@en, "组胺"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D006632> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Acetylcholine>
+<http://ztonebv.com/MiKG4MD#Acetylcholine>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#Neurotransmitter> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#Neurotransmitter> ;
   umls:cui "C0001041" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D000109> ;
   rdfs:label "Acetylcholine"@en, "乙酰胆碱"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D000109> a owl:Class .
-<http://ztonebv.com/MIKG4MD#gutMicrobiota>
+<http://ztonebv.com/MiKG4MD#gutMicrobiota>
   a rdfs:Class ;
   umls:cui "C4018878" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D000069196> ;
   rdfs:label "Gut Microbiota"@en, "肠道微生物"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D000069196> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Bacillus-cereus>
+<http://ztonebv.com/MiKG4MD#Bacillus-cereus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0004590" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001409> ;
   rdfs:label "Bacillus cereus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D001409> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Burkholderia-oklahomensis>
+<http://ztonebv.com/MiKG4MD#Burkholderia-oklahomensis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C1898603" ;
   rdfs:label "Burkholderia oklahomensis"@en .
 
-<http://ztonebv.com/MIKG4MD#Acinetobacter-baumannii>
+<http://ztonebv.com/MiKG4MD#Acinetobacter-baumannii>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0314787" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D040981> ;
   rdfs:label "Acinetobacter baumannii"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D040981> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Paenibacillus>
+<http://ztonebv.com/MiKG4MD#Paenibacillus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C1011299" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D056507> ;
   rdfs:label "Paenibacillus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D056507> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Coprococcus>
+<http://ztonebv.com/MiKG4MD#Coprococcus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C1004293" ;
   rdfs:label "Coprococcus"@en .
 
-<http://ztonebv.com/MIKG4MD#Fusobacterium-varium>
+<http://ztonebv.com/MiKG4MD#Fusobacterium-varium>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0317553" ;
   rdfs:label "Fusobacterium varium"@en .
 
-<http://ztonebv.com/MIKG4MD#Fusobacterium-ulcerans>
+<http://ztonebv.com/MiKG4MD#Fusobacterium-ulcerans>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0445938" ;
   rdfs:label "Fusobacterium ulcerans"@en .
 
-<http://ztonebv.com/MIKG4MD#Bacteroides-fragilis>
+<http://ztonebv.com/MiKG4MD#Bacteroides-fragilis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0004663" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001441> ;
   rdfs:label "Bacteroides fragilis"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D001441> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Acetomicrobium-hydrogeniformans>
+<http://ztonebv.com/MiKG4MD#Acetomicrobium-hydrogeniformans>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C2783099" ;
   rdfs:label "Acetomicrobium hydrogeniformans"@en .
 
-<http://ztonebv.com/MIKG4MD#Bacteroides-uniformis>
+<http://ztonebv.com/MiKG4MD#Bacteroides-uniformis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0314925" ;
   rdfs:label "Bacteroides uniformis"@en .
 
-<http://ztonebv.com/MIKG4MD#Clostridium-ramosum>
+<http://ztonebv.com/MiKG4MD#Clostridium-ramosum>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0315111" ;
   rdfs:label "Clostridium ramosum"@en .
 
-<http://ztonebv.com/MIKG4MD#Hafnia-alvei>
+<http://ztonebv.com/MiKG4MD#Hafnia-alvei>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0315259" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D020611> ;
   rdfs:label "Hafnia alvei"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D020611> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Klebsiella-pneumoniae>
+<http://ztonebv.com/MiKG4MD#Klebsiella-pneumoniae>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0001699" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D007711> ;
   rdfs:label "Klebsiella pneumoniae"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D007711> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Morganella-morganii>
+<http://ztonebv.com/MiKG4MD#Morganella-morganii>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0315276" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D020613> ;
   rdfs:label "Morganella morganii"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D020613> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Candida-albicans>
+<http://ztonebv.com/MiKG4MD#Candida-albicans>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0006837" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D002176> ;
   rdfs:label "Candida albicans"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D002176> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Lactococcus-lactis-subsp-cremoris>
+<http://ztonebv.com/MiKG4MD#Lactococcus-lactis-subsp-cremoris>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0544170" ;
   rdfs:label "Lactococcus lactis subsp cremoris"@en .
 
-<http://ztonebv.com/MIKG4MD#Lactococcus-lactis-subsp-lactis>
+<http://ztonebv.com/MiKG4MD#Lactococcus-lactis-subsp-lactis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C1449851" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D013294> ;
   rdfs:label "Lactococcus lactis subsp lactis"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D013294> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Lactobacillus-plantarum>
+<http://ztonebv.com/MiKG4MD#Lactobacillus-plantarum>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0317608" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D048191> ;
   rdfs:label "Lactobacillus plantarum"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D048191> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Streptococcus-thermophilus>
+<http://ztonebv.com/MiKG4MD#Streptococcus-thermophilus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0318180" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D048249> ;
   rdfs:label "Streptococcus thermophilus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D048249> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Enterococcus-faecalis>
+<http://ztonebv.com/MiKG4MD#Enterococcus-faecalis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0038404" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D013293> ;
   rdfs:label "Enterococcus faecalis"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D013293> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Pichia-guilliermondii>
+<http://ztonebv.com/MiKG4MD#Pichia-guilliermondii>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0319552" ;
   rdfs:label "Pichia guilliermondii"@en .
 
-<http://ztonebv.com/MIKG4MD#Rhodospirillum-rubrum>
+<http://ztonebv.com/MiKG4MD#Rhodospirillum-rubrum>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0035503" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D012247> ;
   rdfs:label "Rhodospirillum rubrum"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D012247> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Saccharomyces-cerevisiae>
+<http://ztonebv.com/MiKG4MD#Saccharomyces-cerevisiae>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0036025" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D012441> ;
   rdfs:label "Saccharomyces cerevisiae"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D012441> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Clostridium>
+<http://ztonebv.com/MiKG4MD#Clostridium>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0009054" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D003013> ;
   rdfs:label "Clostridium"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D003013> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Bacillus-mycoides>
+<http://ztonebv.com/MiKG4MD#Bacillus-mycoides>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C1038169" ;
   rdfs:label "Bacillus mycoides"@en .
 
-<http://ztonebv.com/MIKG4MD#Bacillus-subtilis>
+<http://ztonebv.com/MiKG4MD#Bacillus-subtilis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0004595" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001412> ;
   rdfs:label "Bacillus subtilis"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D001412> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Escherichia-coli>
+<http://ztonebv.com/MiKG4MD#Escherichia-coli>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0014834" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D004926> ;
   rdfs:label "Escherichia coli"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D004926> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Proteus-vulgaris>
+<http://ztonebv.com/MiKG4MD#Proteus-vulgaris>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0033702" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D011514> ;
   rdfs:label "Proteus vulgaris"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D011514> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Staphylococcus-aureus>
+<http://ztonebv.com/MiKG4MD#Staphylococcus-aureus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0038172" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D013211> ;
   rdfs:label "Staphylococcus aureus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D013211> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Serratia-marcescens>
+<http://ztonebv.com/MiKG4MD#Serratia-marcescens>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0036766" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D012706> ;
   rdfs:label "Serratia marcescens"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D012706> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Bacillus>
+<http://ztonebv.com/MiKG4MD#Bacillus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0004587" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001407> ;
   rdfs:label "Bacillus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D001407> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Yersinia-enterocolitica>
+<http://ztonebv.com/MiKG4MD#Yersinia-enterocolitica>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0043406" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D015008> ;
   rdfs:label "Yersinia enterocolitica"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D015008> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Salmonella-enterica>
+<http://ztonebv.com/MiKG4MD#Salmonella-enterica>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0445750" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D019779> ;
   rdfs:label "Salmonella enterica"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D019779> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Pseudomonas-aeruginosa>
+<http://ztonebv.com/MiKG4MD#Pseudomonas-aeruginosa>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0033809" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D011550> ;
   rdfs:label "Pseudomonas aeruginosa"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D011550> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Oscillibacter>
+<http://ztonebv.com/MiKG4MD#Oscillibacter>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C2288424" ;
   rdfs:label "Oscillibacter"@en .
 
-<http://ztonebv.com/MIKG4MD#Escherichia>
+<http://ztonebv.com/MiKG4MD#Escherichia>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0014833" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D004925> ;
   rdfs:label "Escherichia"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D004925> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Bacteroides>
+<http://ztonebv.com/MiKG4MD#Bacteroides>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0004661" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001439> ;
   rdfs:label "Bacteroides"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D001439> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Parabacteroides>
+<http://ztonebv.com/MiKG4MD#Parabacteroides>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C1927848" ;
   rdfs:label "Parabacteroides"@en .
 
-<http://ztonebv.com/MIKG4MD#Lactobacillus-reuteri>
+<http://ztonebv.com/MiKG4MD#Lactobacillus-reuteri>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0317625" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D052200> ;
   rdfs:label "Lactobacillus reuteri"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D052200> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Bifidobacterium-dentium>
+<http://ztonebv.com/MiKG4MD#Bifidobacterium-dentium>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0314985" ;
   rdfs:label "Bifidobacterium dentium"@en .
 
-<http://ztonebv.com/MIKG4MD#Lactobacillus-brevis>
+<http://ztonebv.com/MiKG4MD#Lactobacillus-brevis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0317604" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D052196> ;
   rdfs:label "Lactobacillus brevis"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D052196> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Lactobacillus-buchneri>
+<http://ztonebv.com/MiKG4MD#Lactobacillus-buchneri>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0317605" ;
   rdfs:label "Lactobacillus buchneri"@en .
 
-<http://ztonebv.com/MIKG4MD#Lactobacillus-paracasei>
+<http://ztonebv.com/MiKG4MD#Lactobacillus-paracasei>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C1080735" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D000069980> ;
   rdfs:label "Lactobacillus paracasei "@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D000069980> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Lactobacillus-rhamnosus>
+<http://ztonebv.com/MiKG4MD#Lactobacillus-rhamnosus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0317597" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D052201> ;
   rdfs:label "Lactobacillus rhamnosus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D052201> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Lactobacillus-delbrueckii>
+<http://ztonebv.com/MiKG4MD#Lactobacillus-delbrueckii>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0317588" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D048668> ;
   rdfs:label "Lactobacillus delbrueckii"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D048668> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Monascus-purpureus>
+<http://ztonebv.com/MiKG4MD#Monascus-purpureus>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0997449" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D032741> ;
   rdfs:label "Monascus purpureus"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D032741> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Streptococcus-salivarius>
+<http://ztonebv.com/MiKG4MD#Streptococcus-salivarius>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0318179" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D000070001> ;
   rdfs:label "Streptococcus salivarius"@en .
 
 <http://id.nlm.nih.gov/mesh/2020/D000070001> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Lactobacillus-vaginalis>
+<http://ztonebv.com/MiKG4MD#Lactobacillus-vaginalis>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#gutMicrobiota> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#gutMicrobiota> ;
   umls:cui "C0445725" ;
   rdfs:label "Lactobacillus vaginalis"@en .
 
-<http://ztonebv.com/MIKG4MD#mentalDisorder>
+<http://ztonebv.com/MiKG4MD#mentalDisorder>
   a rdfs:Class ;
   umls:cui "C0004936" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001523> ;
   rdfs:label "mental Disorders"@en, "精神障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D001523> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Anxiety-disorders>
+<http://ztonebv.com/MiKG4MD#Anxiety-disorders>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#mentalDisorder> ;
   umls:cui "C0003469" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001008> ;
   rdfs:label "Anxiety disorders"@en, "焦虑症"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D001008> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Depressive-disorder>
+<http://ztonebv.com/MiKG4MD#Depressive-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#mentalDisorder> ;
   umls:cui "C0011581" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D003866> ;
   rdfs:label "Depressive disorder"@en, "抑郁症"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D003866> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Sleep-disorders>
+<http://ztonebv.com/MiKG4MD#Sleep-disorders>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#mentalDisorder> ;
   umls:cui "C0851578" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D012893> ;
   rdfs:label "Sleep disorders"@en, "睡眠障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D012893> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Eating-disorders>
+<http://ztonebv.com/MiKG4MD#Eating-disorders>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#mentalDisorder> ;
   umls:cui "C0013473" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001068> ;
   rdfs:label "Eating disorders"@en, "进食障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D001068> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Sex-behavior-disorder>
+<http://ztonebv.com/MiKG4MD#Sex-behavior-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#mentalDisorder> ;
   umls:cui "C0221796" ;
   rdfs:label "Sex behavior disorder"@en, "性行为障碍"@zh .
 
-<http://ztonebv.com/MIKG4MD#Personality-disorder>
+<http://ztonebv.com/MiKG4MD#Personality-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#mentalDisorder> ;
   umls:cui "C0031212" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D010554> ;
   rdfs:label "Personality disorder"@en, "人格障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D010554> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Bipolar-disorder>
+<http://ztonebv.com/MiKG4MD#Bipolar-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#mentalDisorder> ;
   umls:cui "C0005586" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001714> ;
   rdfs:label "Bipolar disorder"@en, "双相情感障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D001714> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Autistic-disorder>
+<http://ztonebv.com/MiKG4MD#Autistic-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#mentalDisorder> ;
   umls:cui "C0004352" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D001321> ;
   rdfs:label "Autistic disorder"@en, "自闭症"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D001321> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Cognition-disorders>
+<http://ztonebv.com/MiKG4MD#Cognition-disorders>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#mentalDisorder> ;
   umls:cui "C0009241" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D003072> ;
   rdfs:label "Cognition disorders"@en, "认知障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D003072> a owl:Class .
-<http://ztonebv.com/MIKG4MD#Learning-disorder>
+<http://ztonebv.com/MiKG4MD#Learning-disorder>
   a rdfs:Class ;
-  rdfs:subClassOf <http://ztonebv.com/MIKG4MD#mentalDisorder> ;
+  rdfs:subClassOf <http://ztonebv.com/MiKG4MD#mentalDisorder> ;
   umls:cui "C0023186" ;
   owl:sameAs <http://id.nlm.nih.gov/mesh/2020/D007859> ;
   rdfs:label "Learning disorder"@en, "学习障碍"@zh .
 
 <http://id.nlm.nih.gov/mesh/2020/D007859> a owl:Class .
-<http://ztonebv.com/MIKG4MD#reference>
+<http://ztonebv.com/MiKG4MD#reference>
   a rdfs:Class ;
   rdfs:comment "describe which paper the evidence comes from " ;
   rdfs:label "reference"@en, "参考文献"@zh .
 
-<http://ztonebv.com/MIKG4MD#statement>
+<http://ztonebv.com/MiKG4MD#statement>
   a rdfs:Class ;
   rdfs:comment "describe the evidence that concluded from a paper " ;
   rdfs:label "statement"@en, "结论"@zh .
 
-<http://ztonebv.com/MIKG4MD#relationship>
+<http://ztonebv.com/MiKG4MD#relationship>
   a rdfs:Class ;
   rdfs:comment "describe the relationship between Neurotransmitter and mentalDisorder that mentioned in references" ;
   rdfs:label "relationship"@en .
 
-<http://ztonebv.com/MIKG4MD#Valles2019>
-  a <http://ztonebv.com/MIKG4MD#reference> ;
+<http://ztonebv.com/MiKG4MD#Valles2019>
+  a <http://ztonebv.com/MiKG4MD#reference> ;
   mikg4md:hasPMID "30718848" ;
   mikg4md:hasStatement mikg4md:Valles2019_st1, mikg4md:Valles2019_st2, mikg4md:Valles2019_st3, mikg4md:Valles2019_st4, mikg4md:Valles2019_st5, mikg4md:Valles2019_st6, mikg4md:Valles2019_st7, mikg4md:Valles2019_st8, mikg4md:Valles2019_st9, mikg4md:Valles2019_st10, mikg4md:Valles2019_st11 .
 
@@ -2536,22 +2536,22 @@ mikg4md:NMr168
   a mikg4md:reference ;
   mikg4md:hasPMID "19351547" .
 
-  <http://ztonebv.com/MIKG4MD#hasKEGG_pathway>
+  <http://ztonebv.com/MiKG4MD#hasKEGG_pathway>
   a owl:ObjectProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#Neurotransmitter>;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#Neurotransmitter>;
   rdfs:comment "this neurotransmitter is involved in which KEGG pathway"@en .
   
-<http://ztonebv.com/MIKG4MD#hasNeurotransmitter>
+<http://ztonebv.com/MiKG4MD#hasNeurotransmitter>
   a owl:ObjectProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#statement>, <http://ztonebv.com/MIKG4MD#relationship>, <http://ztonebv.com/MIKG4MD#KEGG_pathway> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#statement>, <http://ztonebv.com/MiKG4MD#relationship>, <http://ztonebv.com/MiKG4MD#KEGG_pathway> ;
   rdfs:comment "the statement mentioned this Neurotransmitter"@en .
  
-<http://ztonebv.com/MIKG4MD#hasMapID>
+<http://ztonebv.com/MiKG4MD#hasMapID>
   a owl:DatatypeProperty ;
-  rdfs:domain <http://ztonebv.com/MIKG4MD#KEGG_pathway> ;
+  rdfs:domain <http://ztonebv.com/MiKG4MD#KEGG_pathway> ;
   rdfs:comment "the pathway has a unique map ID in KEGG"@en .
 
-<http://ztonebv.com/MIKG4MD#KEGG_pathway>
+<http://ztonebv.com/MiKG4MD#KEGG_pathway>
   a rdfs:Class ;
   rdfs:label "KEGG pathway"@en .
  
