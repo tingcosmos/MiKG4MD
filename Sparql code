@@ -12,7 +12,7 @@ PREFIX ctec: <http://eurecaproject.eu/ctec/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
 PREFIX mesh: <http://id.nlm.nih.gov/mesh/>
-PREFIX mikg4md: <http://ztonebv.com/MIKG4MD#>
+PREFIX mikg4md: <http://ztonebv.com/MiKG4MD#>
 
 SELECT DISTINCT ?GM ?NTM ?Ref ?PMID ?Level ?MD1 ?MD2
 WHERE {
@@ -44,7 +44,7 @@ PREFIX ctec: <http://eurecaproject.eu/ctec/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
 PREFIX mesh: <http://id.nlm.nih.gov/mesh/>
-PREFIX mikg4md: <http://ztonebv.com/MIKG4MD#>
+PREFIX mikg4md: <http://ztonebv.com/MiKG4MD#>
 
 SELECT  DISTINCT  ?GM ?NTM ?Modulate ?Level ?Ref ?PMID ?MD
 WHERE {
@@ -75,7 +75,7 @@ PREFIX ctec: <http://eurecaproject.eu/ctec/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX meshv: <http://id.nlm.nih.gov/mesh/vocab#>
 PREFIX mesh: <http://id.nlm.nih.gov/mesh/>
-PREFIX mikg4md: <http://ztonebv.com/MIKG4MD#>
+PREFIX mikg4md: <http://ztonebv.com/MiKG4MD#>
 
 SELECT DISTINCT ?GM ?NTM1 ?NTM2 ?Level ?Ref ?PMID ?MD
 WHERE {
