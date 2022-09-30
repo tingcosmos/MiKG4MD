@@ -5,12 +5,12 @@ We provide three SPARQL query cases with codes and results. Users can perform th
 # Download
 The Schema Data of MiKG4MD, SPARQL query codes, and SPARQL results of three test cases are available at [MiKG4MD Page](https://github.com/tingcosmos/MiKG4MD).
 # Citation
-`@article{liu2020mikg4md,\\
+`@article{liu2020mikg4md,
     author = {Liu, Ting and Pan, Xueli and Wang, Xu and Feenstra, K Anton and Heringa, Jaap and Huang, Zhisheng},
     title = "{Predicting the relationships between gut microbiota and mental disorders with knowledge graphs}",
     journal = {Health Information Science and Systems},
     year = {2020},
-    volume = {8},\\
+    volume = {8},
     number = {1},
     pages = {1--9},
     year = {2020},
